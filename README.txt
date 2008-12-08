@@ -1,7 +1,26 @@
 Introduction
 ============
 
-Adds two new portlet zones: one above the main heading (h1) of the page, and the other at the  base of the page, above the footer
+Overview
+* Creates two new areas where portlets can be added to your Plone site:
+  * above the main heading (h1) of the page
+  * at the base of the page, above the footer
+  In each area, you can add up to three columns of portlets. 
+
+* You should use CSS (in the custom folder in portal_skins, or in your own theme product) 
+  to configure how these portlets should appear relative to each other and to the content.
+
+Technical details
+* This product adds two new viewlets; within each of these we call a template that calls a series of portlet managers
+  (the portlet managers are specified in portlets.xml)
+  See browser/configure.zcml for details of exactly which viewlet managers these viewlets slot into
+
+* For styling: each area has a CSS id, and each column within it has a CSS class; these can be used for styling
+  For example, if you want just two columns of portlets above the content, you could style with something like:
+  #portlets-above .portletsAboveContentA, #portlets-above .portletsAboveContentB { width:48%; padding-right:2em; float:left }
+
+* The browserlayer.xml file adds crucial functionality; it cannot be replaced with a layer declaration in configure.zcml
+  
 
 TODO:
 The ContentWellPortlets.css and cssregistry.xml files should disappear from later versions of this product 
