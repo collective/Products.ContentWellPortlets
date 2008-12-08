@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<portlets>
+	<portletmanager 
+		 name="contentwellportlets.portlets-above-manager"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+	/>
+
+	<portletmanager 
+		 name="contentwellportlets.portlets-below-manager"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+	/>
+
+</portlets>

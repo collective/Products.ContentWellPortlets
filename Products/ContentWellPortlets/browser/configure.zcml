@@ -1,0 +1,42 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone">
+
+<!-- add a viewlet to the top of the content well -->
+	<browser:viewlet
+		 name="contentwellportlets.portletsabovecontent"
+		 template="templates/portletsabovecontent.pt"
+		 manager="plone.app.layout.viewlets.interfaces.IContentViews"
+		 layer=".interfaces.IContentWellPortlets"
+		 permission="zope2.View" 
+	/> 
+
+<!-- add a management view for the portlet manager -->
+	<browser:page
+		 name="manage-portletsabovecontent"
+		 for="plone.portlets.interfaces.ILocalPortletAssignable"
+		 class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+		 template="templates/manageportletsabove.pt"
+		 permission="plone.app.portlets.ManagePortlets"
+	/>
+
+<!-- add a viewlet to the bottom of the content well -->
+	<browser:viewlet
+		 name="contentwellportlets.portletsbelowcontent"
+		 template="templates/portletsbelowcontent.pt"
+		 manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+		 layer=".interfaces.IContentWellPortlets"
+		 permission="zope2.View" 
+	/> 
+
+<!-- add a management view for the portlet manager -->
+	<browser:page
+		 name="manage-portletsbelowcontent"
+		 for="plone.portlets.interfaces.ILocalPortletAssignable"
+		 class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+		 template="templates/manageportletsbelow.pt"
+		 permission="plone.app.portlets.ManagePortlets"
+	/>
+
+</configure>

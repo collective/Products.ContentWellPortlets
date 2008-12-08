@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="Products.ContentWellPortlets">
+
+	<include package=".browser" />
+
+<!-- register the Generic Setup extension profile -->
+	<genericsetup:registerProfile
+	      name="default"
+	      title="ContentWellPortlets"
+	      directory="profiles/default"
+	      description="Extension profile for Products.ContentWellPortlets"
+	      provides="Products.GenericSetup.interfaces.EXTENSION"
+	      />
+
+</configure>

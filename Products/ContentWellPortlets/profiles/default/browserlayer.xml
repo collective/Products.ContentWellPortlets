@@ -1,0 +1,5 @@
+<layers>
+ <layer name="ContentWellPortlets"
+   interface="Products.ContentWellPortlets.browser.interfaces.IContentWellPortlets"
+ />
+</layers>

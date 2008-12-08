@@ -1,0 +1,48 @@
+Products.ContentWellPortlets Installation
+==========================
+
+To install Products.ContentWellPortlets into the global Python environment (or a workingenv),
+using a traditional Zope 2 instance, you can do this:
+
+(Either)
+= As an old style Zope 2 Product =
+Because its top level Python namespace package is called ``Products``, this
+package can be installed in Zope 2 as an old style **Zope 2 Product**.
+(a) Check the product out of subversion
+(b) move (or symlink) the ``ContentWellPortlets`` folder 
+(``Products.ContentWellPortlets/Products/ContentWellPortlets``) into the ``Products`` directory of
+the Zope instance it has to be installed for, and restart the server.
+
+(Or)
+= Using buildout =
+If you are using zc.buildout and the plone.recipe.zope2instance recipe, you can do this:
+
+ (i) Add ``Products.ContentWellPortlets`` to the list of eggs to install, e.g.:
+ 
+    [buildout]
+    ...
+    eggs =
+        ...
+        Products.ContentWellPortlets
+        
+  (ii) Re-run buildout, e.g. with:
+  
+    $ ./bin/buildout -N
+
+(Or)
+ * If you are using Zope 2.9 (not 2.10), get `pythonproducts`_ (http://plone.org/products/pythonproducts)
+   and install it via:: **
+
+       python setup.py install --home /path/to/instance
+
+   into your Zope instance.
+
+ * Create a file called ``Products.ContentWellPortlets-configure.zcml`` in the
+   ``/path/to/instance/etc/package-includes`` directory.  The file
+   should only contain this::
+
+       <include package="Products.ContentWellPortlets" />
+
+ ** Note: Find out how to install setuptools and EasyInstall here:
+   http://peak.telecommunity.com/DevCenter/EasyInstall
+
