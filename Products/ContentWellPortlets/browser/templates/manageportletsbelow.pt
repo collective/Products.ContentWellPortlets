@@ -11,9 +11,24 @@
 	    </div>
 	</head>
 	<body>
+		<div metal:fill-slot="portlets_one_slot">
+			<tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
+		</div>
+
 		<div metal:fill-slot="main">
 			<h1 class="documentFirstHeading">Manage portlets below content</h1>
-			<span tal:replace="structure provider:contentwellportlets.portlets-below-manager" />
+			<h2>Column A</h2>
+			<span tal:replace="structure provider:contentwellportlets.portlets-below-manager1" />
+
+			<h2>Column B</h2>
+			<span tal:replace="structure provider:contentwellportlets.portlets-below-manager2" />
+
+			<h2>Column C</h2>
+			<span tal:replace="structure provider:contentwellportlets.portlets-below-manager3" />
+		</div>
+
+		<div metal:fill-slot="portlets_two_slot">
+			<tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
 		</div>
 	</body>
 </html>

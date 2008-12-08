@@ -1,12 +1,32 @@
 <?xml version="1.0"?>
 <portlets>
 	<portletmanager 
-		 name="contentwellportlets.portlets-above-manager"
+		 name="contentwellportlets.portlets-above-manager1"
 		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
 	/>
 
 	<portletmanager 
-		 name="contentwellportlets.portlets-below-manager"
+		 name="contentwellportlets.portlets-above-manager2"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+	/>
+
+	<portletmanager 
+		 name="contentwellportlets.portlets-above-manager3"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+	/>
+
+	<portletmanager 
+		 name="contentwellportlets.portlets-below-manager1"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+	/>
+
+	<portletmanager 
+		 name="contentwellportlets.portlets-below-manager2"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+	/>
+
+	<portletmanager 
+		 name="contentwellportlets.portlets-below-manager3"
 		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
 	/>
 

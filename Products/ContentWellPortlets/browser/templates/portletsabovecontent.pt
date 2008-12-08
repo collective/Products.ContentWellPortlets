@@ -1,1 +1,9 @@
-<div id="portlets-above" tal:content="structure provider:contentwellportlets.portlets-above-manager" />
+<div id="portlets-above">
+	
+	<div class="portletsAboveContentA" tal:content="structure provider:contentwellportlets.portlets-above-manager1" /> 
+
+	<div class="portletsAboveContentB" tal:content="structure provider:contentwellportlets.portlets-above-manager2" /> 
+
+	<div class="portletsAboveContentC" tal:content="structure provider:contentwellportlets.portlets-above-manager3" /> 
+	
+</div>
