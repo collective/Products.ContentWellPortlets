@@ -5,7 +5,7 @@ version = '0.1'
 
 setup(name='Products.ContentWellPortlets',
       version=version,
-      description="A Plone product that adds portlets to the main body of the page",
+      description="A Plone product that enables you to add portlets to the central column in a page",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
