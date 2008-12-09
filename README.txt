@@ -30,22 +30,21 @@ To add portlets above the content
 
 To add portlets below the content
 =================================
-Follow the above instructions, but add /@@manage-portletsbelowcontent to the end of the URL instead of
-/@@manage-portletsabovecontent
+Follow the above instructions, but instead of /@@manage-portletsabovecontent, 
+add /@@manage-portletsbelowcontent to the end of the URL
 
 
 Technical details
 ===================
 
-* The product adds two new viewlets; within each of these we call a template 
-  that calls portlet managers (specified in portlets.xml)
+* The product adds two new viewlets; within each of these are three portlet managers (specified in portlets.xml)
   For details of exactly which viewlet managers these viewlets slot into:
    * see configure.zcml in Products/ContentWellPortlets/browser
    * or install the product, go to your Plone site and add /@@manage-viewlets to the URL
 
 * For styling: 
-   * viewlets are contained within a div that has a CSS id
-   * each portlet manager within the viewlet is in a div with CSS class; these can be used for styling
+   * Viewlets are contained within a div that has a CSS id
+   * Each portlet manager within the viewlet is in a div with CSS class; these can be used for styling
   For example, if you want just two columns of portlets above the content, you could style with something like:
   #portlets-above .portletsAboveContentA, #portlets-above .portletsAboveContentB { width:48%; padding-right:2em; float:left }
 
@@ -53,8 +52,10 @@ Technical details
   
 
 TODO:
-The ContentWellPortlets.css and cssregistry.xml files should disappear from later versions of this product 
+* The ContentWellPortlets.css and cssregistry.xml files should disappear from later versions of this product 
 The CSS is only here as a temporary fudge to hide the "manage portlets" link that leads to the @@manage-portlets view.
 That link is called in by a python script: plone.app.portlets.manager.ColumnPortletManagerRenderer
 We are parasitizing this script for the time being, so we get the template that it calls 
 (which renders the link along with all its other goodness) 
+
+* When the product is released as an egg, change INSTALL.TXT to reflect this 

@@ -21,7 +21,7 @@ package can be installed in Zope 2 as an old style **Zope 2 Product** as follows
 If you are using zc.buildout and the plone.recipe.zope2instance recipe, you can do this:
 
 == B1. Install it as a development egg ==
-(i) Get the product buildout.eggtractor if you don't already have it, as follows:
+ (i) Get the product buildout.eggtractor if you don't already have it, as follows:
  * Add "extensions = buildout.eggtractor" to the "parts" section of your buildout.cfg
     [parts]
     ...
@@ -31,19 +31,19 @@ If you are using zc.buildout and the plone.recipe.zope2instance recipe, you can 
   
     $ ./bin/buildout -N
 
-(ii) Check Products.ContentWellPortlets out of subversion onto somewhere on your file system
+ (ii) Check Products.ContentWellPortlets out of subversion onto somewhere on your file system
 
-(iii) Move or softlink Products.ContentWellPortlets into the /src folder alongside your buildout.cfg
+ (iii) Move or softlink Products.ContentWellPortlets into the /src folder alongside your buildout.cfg
 
-(iv) Make sure Zope isn't running and rerun buildout with the -o flag:
+ (iv) Make sure Zope isn't running and rerun buildout with the -o flag:
     $ ./bin/buildout -o
 
-(v) Restart Zope; you should see ContentWellPortlets available in the portal_quickinstaller and 
+ (v) Restart Zope; you should see ContentWellPortlets available in the portal_quickinstaller and 
     Add/Remove Products pane of the Plone Control Panel
 
 
 == B2. If the product has been released ==
-(i) Add ``Products.ContentWellPortlets`` to the list of eggs to install, e.g.:
+ (i) Add ``Products.ContentWellPortlets`` to the list of eggs to install, e.g.:
  
     [buildout]
     ...
@@ -51,11 +51,11 @@ If you are using zc.buildout and the plone.recipe.zope2instance recipe, you can 
         ...
         Products.ContentWellPortlets
         
-(ii) Stop Zope and re-run buildout, e.g. with:
+ (ii) Stop Zope and re-run buildout, e.g. with:
   
     $ ./bin/buildout -N
 
-(iii) Restart Zope; you should see ContentWellPortlets available in the portal_quickinstaller and
+ (iii) Restart Zope; you should see ContentWellPortlets available in the portal_quickinstaller and
       Add/Remove Products pane of the Plone Control Panel
 
 (Or)
