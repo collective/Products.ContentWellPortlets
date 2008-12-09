@@ -1,9 +1,9 @@
 <div id="portlets-below">
 	
-	<div class="portletsBelowContentA" tal:content="structure provider:contentwellportlets.portlets-below-manager1" /> 
+	<div class="portletsBelowContentA" tal:content="structure provider:ContentWellPortlets.BelowPortletManager1" /> 
 
-	<div class="portletsBelowContentB" tal:content="structure provider:contentwellportlets.portlets-below-manager2" /> 
+	<div class="portletsBelowContentB" tal:content="structure provider:ContentWellPortlets.BelowPortletManager2" /> 
 
-	<div class="portletsBelowContentC" tal:content="structure provider:contentwellportlets.portlets-below-manager3" /> 
+	<div class="portletsBelowContentC" tal:content="structure provider:ContentWellPortlets.BelowPortletManager3" /> 
 	
 </div>

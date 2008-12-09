@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- Reorder the viewlets above the content well because by default the new viewlet is plonked underneath the existing viewlets -->
+
+<object>
+	<order manager = "plone.contentviews" skinname = "*">
+		<viewlet name = "contentwellportlets.portletsabovecontent" insert-before = "plone.contentviews" />
+		<viewlet name = "plone.contentviews" insert-before = "plone.contentactions" />
+	</order>
+</object>

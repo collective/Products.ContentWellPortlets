@@ -19,13 +19,13 @@
 		<div metal:fill-slot="main">
 			<h1 class="documentFirstHeading">Manage portlets above content</h1>
 			<h2>Column A</h2>
-			<span tal:replace="structure provider:contentwellportlets.portlets-above-manager1" />
+			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager1" />
 
 			<h2>Column B</h2>
-			<span tal:replace="structure provider:contentwellportlets.portlets-above-manager2" />
+			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager2" />
 
 			<h2>Column C</h2>
-			<span tal:replace="structure provider:contentwellportlets.portlets-above-manager3" />
+			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager3" />
 		</div>
 
 		<div metal:fill-slot="portlets_two_slot">

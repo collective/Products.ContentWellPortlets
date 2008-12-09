@@ -4,6 +4,9 @@
     xmlns:plone="http://namespaces.plone.org/plone"
 	i18n_domain="Products.ContentWellPortlets">
 
+<!-- the following line needs to be present if the package is to be installed as an egg -->
+	<include package ="plone.app.portlets" />
+
 <!-- add a viewlet to the top of the content well -->
 	<browser:viewlet
 		 name="contentwellportlets.portletsabovecontent"

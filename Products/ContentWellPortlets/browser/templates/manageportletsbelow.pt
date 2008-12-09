@@ -18,13 +18,13 @@
 		<div metal:fill-slot="main">
 			<h1 class="documentFirstHeading">Manage portlets below content</h1>
 			<h2>Column A</h2>
-			<span tal:replace="structure provider:contentwellportlets.portlets-below-manager1" />
+			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager1" />
 
 			<h2>Column B</h2>
-			<span tal:replace="structure provider:contentwellportlets.portlets-below-manager2" />
+			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager2" />
 
 			<h2>Column C</h2>
-			<span tal:replace="structure provider:contentwellportlets.portlets-below-manager3" />
+			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager3" />
 		</div>
 
 		<div metal:fill-slot="portlets_two_slot">
