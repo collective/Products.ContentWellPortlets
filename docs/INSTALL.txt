@@ -1,6 +1,11 @@
 Products.ContentWellPortlets Installation
 ==========================
 
+= Prerequisites =
+Zope 2.10 or higher
+Plone 3.1.1 or higher
+
+= Instructions =
 To install Products.ContentWellPortlets into your Plone site, you have various options
 
 (Either)
@@ -13,8 +18,7 @@ package can be installed in Zope 2 as an old style **Zope 2 Product** as follows
      (``Products.ContentWellPortlets/Products/ContentWellPortlets``) into the ``Products`` directory of
      the Zope instance it has to be installed for, and restart the server.
 
- (c) You should see ContentWellPortlets available in the portal_quickinstaller and 
-     Add/Remove Products pane of the Plone Control Panel
+ (c) You should see ContentWellPortlets available in the portal_quickinstaller and Add/Remove Products pane of the Plone Control Panel
 
 (Or)
 = B. Install using buildout =
@@ -38,8 +42,7 @@ If you are using zc.buildout and the plone.recipe.zope2instance recipe, you can 
  (iv) Make sure Zope isn't running and rerun buildout with the -o flag:
     $ ./bin/buildout -o
 
- (v) Restart Zope; you should see ContentWellPortlets available in the portal_quickinstaller and 
-    Add/Remove Products pane of the Plone Control Panel
+ (v) Restart Zope; you should see ContentWellPortlets available in the portal_quickinstaller and Add/Remove Products pane of the Plone Control Panel
 
 
 == B2. If the product has been released ==
@@ -55,24 +58,5 @@ If you are using zc.buildout and the plone.recipe.zope2instance recipe, you can 
   
     $ ./bin/buildout -N
 
- (iii) Restart Zope; you should see ContentWellPortlets available in the portal_quickinstaller and
-      Add/Remove Products pane of the Plone Control Panel
-
-(Or)
-= C. If you are using Zope 2.9 (not 2.10) =
-Get `pythonproducts`_ (http://plone.org/products/pythonproducts)
-   and install it via:: **
-
-       python setup.py install --home /path/to/instance
-
-   into your Zope instance.
-
- * Create a file called ``Products.ContentWellPortlets-configure.zcml`` in the
-   ``/path/to/instance/etc/package-includes`` directory.  The file
-   should only contain this::
-
-       <include package="Products.ContentWellPortlets" />
-
- ** Note: Find out how to install setuptools and EasyInstall here:
-   http://peak.telecommunity.com/DevCenter/EasyInstall
+ (iii) Restart Zope; you should see ContentWellPortlets available in the portal_quickinstaller and Add/Remove Products pane of the Plone Control Panel
 

@@ -5,5 +5,9 @@
 	<div class="portletsBelowContentB" tal:content="structure provider:ContentWellPortlets.BelowPortletManager2" /> 
 
 	<div class="portletsBelowContentC" tal:content="structure provider:ContentWellPortlets.BelowPortletManager3" /> 
+
+	<a class="managePortletsBelowLink" href="" 
+	   tal:condition="view/canManagePortlets"
+	   tal:attributes="href view/manageUrl">Add, edit or remove a portlet below the content</a>
 	
 </div>

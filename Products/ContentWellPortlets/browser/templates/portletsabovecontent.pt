@@ -6,4 +6,8 @@
 
 	<div class="portletsAboveContentC" tal:content="structure provider:ContentWellPortlets.AbovePortletManager3" /> 
 	
+	<a class="managePortletsAboveLink" href="" 
+	   tal:condition="view/canManagePortlets"
+	   tal:attributes="href view/manageUrl">Add, edit or remove a portlet above the content</a>
+	
 </div>

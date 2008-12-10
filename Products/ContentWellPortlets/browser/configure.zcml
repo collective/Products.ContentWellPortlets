@@ -10,7 +10,7 @@
 <!-- add a viewlet to the top of the content well -->
 	<browser:viewlet
 		 name="contentwellportlets.portletsabovecontent"
-		 template="templates/portletsabovecontent.pt"
+		 class=".viewlets.PortletsAboveViewlet"
 		 manager="plone.app.layout.viewlets.interfaces.IContentViews"
 		 layer=".interfaces.IContentWellPortlets"
 		 permission="zope2.View" 
@@ -28,7 +28,7 @@
 <!-- add a viewlet to the bottom of the content well -->
 	<browser:viewlet
 		 name="contentwellportlets.portletsbelowcontent"
-		 template="templates/portletsbelowcontent.pt"
+		 class=".viewlets.PortletsBelowViewlet"
 		 manager="plone.app.layout.viewlets.interfaces.IBelowContent"
 		 layer=".interfaces.IContentWellPortlets"
 		 permission="zope2.View" 
