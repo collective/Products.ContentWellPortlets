@@ -2,3 +2,8 @@
     display:none;
 }
 
+.managePortletsAboveLink,
+.managePortletsBelowLink  {
+    text-align:center;
+    padding:1em;
+}
