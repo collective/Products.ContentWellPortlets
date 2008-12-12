@@ -6,8 +6,7 @@ Overview
   * at the base of the page, above the footer
   In each area, you can add up to three columns of portlets. 
 
-* You should use CSS (in the custom folder in portal_skins, or in your own theme product) 
-  to configure how these portlets should appear relative to each other and to the content.
+* You should use CSS (in the custom folder in portal_skins, or in your own theme product)  to configure how these portlets should appear relative to each other and to the content.
 
 To install the product
 ======================
@@ -46,12 +45,15 @@ Technical details
    * see configure.zcml in Products/ContentWellPortlets/browser
    * or install the product, go to your Plone site and add /@@manage-viewlets to the URL
 
+* The browserlayer.xml file adds crucial functionality; it cannot be replaced with a layer declaration in configure.zcml
+
 * For styling: 
    * Viewlets are contained within a div that has a CSS id
    * Each portlet manager within the viewlet is in a div with CSS class; these can be used for styling
-The following sample css can be used to create fluid layouts that fluidly span the entire width of the content area.
-Simply copy and paste the css for the type of layout you are looking for into your product's css or via the custom folder of the ZMI. 
-**If you experience issues with one of the portlet Wells (usually the farthest right) dropping down, there may be a margin or padding being applied to the divs, setting a 0 margin and padding to the .portletsAboveContentA, .portletAboveContentB, etc. classes should fix this.
+
+Below is some sample CSS that may work to generate different layouts (although it's up to you to test that is indeed the case in the browsers that matter to your users)
+Simply copy and paste the css for the type of layout you are looking for into your theme product's stylesheet, or into portal_skins/ploneCustom.css in the ZMI. 
+If you experience issues with one of the portlet areas (usually the farthest right) dropping down below the other(s), try setting margin:0 and padding:0 on the .portletsAboveContentA, .portletAboveContentB, etc. classes.
 
     /* ----  Three Column Above Layout  ---*/
     .portletsAboveContentA, .portletsAboveContentB, .portletsAboveContentC { float:left; }
@@ -59,14 +61,12 @@ Simply copy and paste the css for the type of layout you are looking for into yo
     .portletsAboveContentB { width:34%; }
     .portletsAboveContentA .portletWrapper, .portletsAboveContentB .portletWrapper, .portletsAboveContentC .portletWrapper { padding-right:1em; }
 
-    /* ----  Two Column Above Layout  ---*/
-    /* ----  Assumes the usage of content wells A & B ---*/
+    /* ----  Two Column Above Layout (assumes usage of content wells A & B) ---*/
     .portletsAboveContentA, .portletsAboveContentB { float:left; width:50%; }
     .portletsAboveContentA .portletWrapper, .portletsAboveContentB .portletWrapper { padding-right:1em; }
 
 
-    /* ----  Two Column Below Layout ----- */
-    /* ----  Assumes the usage of content wells A & B ---*/
+    /* ----  Two Column Below Layout (assumes usage of content wells A & B) ---*/
     .portletsBelowContentA, .portletsBelowContentB, { float:left; width:50%; }
     .portletsBelowContentA .portletWrapper, .portletsBelowContentB .portletWrapper, { padding-right:1em; }
  
@@ -76,16 +76,9 @@ Simply copy and paste the css for the type of layout you are looking for into yo
     .portletsBelowContentA, .portletsBelowContentC { width:33%; }
     .portletsBelowContentB { width:34%; }
     .portletsBelowContentA .portletWrapper, .portletsBelowContentB .portletWrapper, .portletsBelowContentC .portletWrapper { padding-right:1em; }
-
-
-* The browserlayer.xml file adds crucial functionality; it cannot be replaced with a layer declaration in configure.zcml
   
 
-TODO:
-* The ContentWellPortlets.css and cssregistry.xml files should disappear from later versions of this product 
-The CSS is only here as a temporary fudge to hide the "manage portlets" link that leads to the @@manage-portlets view.
-That link is called in by a python script: plone.app.portlets.manager.ColumnPortletManagerRenderer
-We are parasitizing this script for the time being, so we get the template that it calls 
-(which renders the link along with all its other goodness) 
-
-* When the product is released as an egg, change INSTALL.TXT to reflect this 
+Bug reporting
+=============
+Check https://weblion.psu.edu/trac/weblion/query?milestone=ContentWellPortlets+2.0
+If you don't see your issue filed there already, go ahead and add a new ticket (component = ContentWellPortlets)
