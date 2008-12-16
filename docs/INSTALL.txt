@@ -26,8 +26,8 @@ If you are using zc.buildout and the plone.recipe.zope2instance recipe, you can 
 
 == B1. Install it as a development egg ==
  (i) Get the product buildout.eggtractor if you don't already have it, as follows:
- * Add "extensions = buildout.eggtractor" to the "parts" section of your buildout.cfg
-    [parts]
+ * Add "extensions = buildout.eggtractor" to the "buildout" section of your buildout.cfg
+    [buildout]
     ...
     extensions = buildout.eggtractor
  * Save these changes to buildout.cfg
