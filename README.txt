@@ -8,6 +8,8 @@ Overview
 
 * You should use CSS (in the custom folder in portal_skins, or in your own theme product)  to configure how these portlets should appear relative to each other and to the content.
 
+* This may allow you to create distinctive layouts for pages, folders etc without having to write new zope page templates
+
 To install the product
 ======================
 * See docs/INSTALL.TXT for instructions
@@ -22,7 +24,7 @@ To add portlets above the content
 3. Bring up a management page by either
    (a) Clicking the "add, edit or remove portlets link"**; or
    (b) Adding /@@manage-portletsabovecontent to the end of the URL and hitting "return"
- 4. You should see a management page entitled "Manage Portlets Above Content"
+4. You should see a management page entitled "Manage Portlets Above Content"
    This gives you the option to add portlets in one or more of three columns: A, B and C
    You can add as many portlets in each column as you like
    Other commands (reordering, hiding, blocking portlets) are the same as for the right and left columns
@@ -45,15 +47,16 @@ Technical details
    * see configure.zcml in Products/ContentWellPortlets/browser
    * or install the product, go to your Plone site and add /@@manage-viewlets to the URL
 
-* The browserlayer.xml file adds crucial functionality; it cannot be replaced with a layer declaration in configure.zcml
+* The browserlayer.xml file enables this product to work with whatever theme product is installed
+  It should not be replaced with a layer declaration in configure.zcml
 
 * For styling: 
    * Viewlets are contained within a div that has a CSS id
    * Each portlet manager within the viewlet is in a div with CSS class; these can be used for styling
 
 Below is some sample CSS that may work to generate different layouts (although it's up to you to test that is indeed the case in the browsers that matter to your users)
-Simply copy and paste the css for the type of layout you are looking for into your theme product's stylesheet, or into portal_skins/ploneCustom.css in the ZMI. 
-If you experience issues with one of the portlet areas (usually the farthest right) dropping down below the other(s), try setting margin:0 and padding:0 on the .portletsAboveContentA, .portletAboveContentB, etc. classes.
+Simply copy and paste the css for the type of layout you are looking for into your own theme product's stylesheet, or into portal_skins/ploneCustom.css in the ZMI. 
+If you experience issues with one of the portlet areas (usually the farthest right) dropping down below the other(s), try setting margin:0 and padding:0 on the .portletsAboveContentA, .portletAboveContentB, etc. classes. 
 
     /* ----  Three Column Above Layout  ---*/
     .portletsAboveContentA, .portletsAboveContentB, .portletsAboveContentC { float:left; }
@@ -68,7 +71,7 @@ If you experience issues with one of the portlet areas (usually the farthest rig
 
     /* ----  Two Column Below Layout (assumes usage of content wells A & B) ---*/
     .portletsBelowContentA, .portletsBelowContentB, { float:left; width:50%; }
-    .portletsBelowContentA .portletWrapper, .portletsBelowContentB .portletWrapper, { padding-right:1em; }
+    .portletsBelowContentA .portletWrapper, .portletsBelowContentB .portletWrapper { padding-right:1em; }
  
 
     /* ----  Three Column Below Layout ----- */
@@ -78,7 +81,7 @@ If you experience issues with one of the portlet areas (usually the farthest rig
     .portletsBelowContentA .portletWrapper, .portletsBelowContentB .portletWrapper, .portletsBelowContentC .portletWrapper { padding-right:1em; }
   
 
-Bug reporting
+Bug reporting / feature suggestions
 =============
 Check https://weblion.psu.edu/trac/weblion/query?milestone=ContentWellPortlets+2.0
 If you don't see your issue filed there already, go ahead and add a new ticket (component = ContentWellPortlets)
