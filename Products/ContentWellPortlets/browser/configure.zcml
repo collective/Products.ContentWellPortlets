@@ -43,12 +43,17 @@
 		 permission="plone.app.portlets.ManagePortlets"
 	/>
 
-
 <!-- Register the resource directory for stylesheets -->
     <browser:resourceDirectory
         name="ContentWellPortlets.styles"
         directory="styles"
         layer=".interfaces.IContentWellPortlets"
         />
+
+<!-- make an adapter for our very own renderer -->
+<adapter
+	factory="Products.ContentWellPortlets.browser.manager.ContentWellPortletRenderer"
+	provides="plone.portlets.interfaces.IPortletManagerRenderer"
+	/>
 
 </configure>

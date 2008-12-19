@@ -7,11 +7,11 @@ class PortletsAboveViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/portletsabovecontent.pt')
         
     def update(self):
-        '''
+        """
         Define everything we want to call in the template
-        '''
+        """
         context_state = getMultiAdapter((self.context, self.request), name=u'plone_context_state')
-        self.manageUrl = str(context_state.view_url()) + '/@@manage-portletsabovecontent'
+        self.manageUrl =  '%s/@@manage-portletsabovecontent' % context_state.view_url()
         
         ## This is the way it's done in plone.app.portlets.manager, so we'll do the same
         mt = getToolByName(self.context, 'portal_membership')
@@ -22,11 +22,11 @@ class PortletsBelowViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/portletsbelowcontent.pt')
         
     def update(self):
-        '''
+        """
         Define everything we want to call in the template
-        '''
+        """
         context_state = getMultiAdapter((self.context, self.request), name=u'plone_context_state')
-        self.manageUrl = str(context_state.view_url()) + '/@@manage-portletsbelowcontent'
+        self.manageUrl =  '%s/@@manage-portletsbelowcontent' % context_state.view_url()
         
         ## This is the way it's done in plone.app.portlets.manager, so we'll do the same
         mt = getToolByName(self.context, 'portal_membership')

@@ -15,7 +15,6 @@ class TestSetup(ContentWellPortletsTestCase):
     def testCSSregistered(self):
         '''
         Is our stylesheet registered?
-        TODO: remove this test once the workaround requiring the stylesheet is fixed
         '''
         self.failUnless('++resource++ContentWellPortlets.styles/ContentWellPortlets.css' in self.portal.portal_css.getResourceIds(), 'Cannot find CSS')
         
@@ -42,7 +41,6 @@ class TestSetup(ContentWellPortletsTestCase):
         # try rendering a portlet with it using getMultiAdapter((context, request, view, manager, assignment), Interface)
         renderer = getMultiAdapter((self.folder, self.folder.REQUEST, self.folder.restrictedTraverse('@@plone'), manager, calendar.Assignment()), IPortletRenderer)
         self.failUnless(isinstance(renderer, calendar.Renderer), 'Cannot render portlet above contents')
-        import pdb; pdb.set_trace()
         
 def test_suite():
     suite = unittest.TestSuite()

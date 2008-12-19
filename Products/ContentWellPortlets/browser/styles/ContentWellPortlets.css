@@ -1,9 +1,5 @@
-#portal-column-content .managePortletsLink {
-    display:none;
-}
-
 .managePortletsAboveLink,
 .managePortletsBelowLink  {
     text-align:center;
-    padding:1em;
+    padding:0.5em;
 }
