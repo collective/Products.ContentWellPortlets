@@ -8,7 +8,8 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.ContentWellPortlets.browser.interfaces import IContentWellPortletManager
 
 class ContentWellPortletRenderer(ColumnPortletManagerRenderer):
-    """A renderer for the content-well portlets
+    """
+    A renderer for the content-well portlets
     """
     adapts(Interface, IDefaultBrowserLayer, IBrowserView, IContentWellPortletManager)
     template = ViewPageTemplateFile('templates/renderer.pt')

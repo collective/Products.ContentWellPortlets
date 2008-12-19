@@ -8,11 +8,11 @@ class IContentWellPortlets(Interface):
     """
 
 class IContentWellPortletManager(IPortletManager, IColumn):
-    '''
+    """
     Superclass used by our adapter
 	The IColumn bit means that we can add all the portlets available to 
 	 the right-hand and left-hand column portlet managers
-    '''
+    """
     
 class IPortletsAboveContent(IContentWellPortletManager):
 	 """

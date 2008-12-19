@@ -10,3 +10,9 @@ Changelog
 ----------------
 
 * Fixed an issue with an incomplete egg
+
+1.1 (2008-12-19)
+----------------
+
+* Added our own portlet manager renderer rather than using the one used by left-hand and right-hand colums
+* Got rid of CSS associated with the previous (fudge) method of rendering we were using

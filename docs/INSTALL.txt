@@ -3,7 +3,7 @@ Products.ContentWellPortlets Installation
 
 = Prerequisites =
 Zope 2.10 or higher
-Plone 3.1.1 or higher
+Plone 3.1.7 or higher
 
 = Instructions =
 To install Products.ContentWellPortlets into your Plone site, you have various options
@@ -12,9 +12,9 @@ To install Products.ContentWellPortlets into your Plone site, you have various o
 = A. Install as an old style Zope 2 Product =
 Because its top level Python namespace package is called ``Products``, this
 package can be installed in Zope 2 as an old style **Zope 2 Product** as follows:
- (a) Check Products.ContentWellPortlets out of subversion onto somewhere on your file system
+ (a) Check Products.ContentWellPortlets out of subversion onto somewhere on your file system, or untar the tarball
 
- (b) move (or symlink) the ``ContentWellPortlets`` folder 
+ (b) Move (or symlink / soft link) the ``ContentWellPortlets`` folder 
      (``Products.ContentWellPortlets/Products/ContentWellPortlets``) into the ``Products`` directory of
      the Zope instance it has to be installed for, and restart the server.
 
