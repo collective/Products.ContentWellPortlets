@@ -83,5 +83,5 @@ If you experience issues with one of the portlet areas (usually the farthest rig
 
 Bug reporting / feature suggestions
 =============
-Check https://weblion.psu.edu/trac/weblion/query?milestone=ContentWellPortlets+2.0
+Check https://weblion.psu.edu/trac/weblion/query?component=ContentWellPortlets
 If you don't see your issue filed there already, go ahead and add a new ticket (component = ContentWellPortlets)
