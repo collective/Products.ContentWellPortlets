@@ -17,6 +17,19 @@
 		</div>
 
 		<div metal:fill-slot="main">
+
+			<tal:warning tal:condition="plone_view/isDefaultPageInFolder">
+				<dl class="portalMessage warning">
+					<dt>Is this really where you want to add portlets above the content?</dt>
+					<dd>If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, 
+						<a href=""
+						   tal:attributes="href string:${plone_view/getCurrentFolderUrl}/@@manage-portletsabovecontent">
+							add them to the folder itself
+						</a>
+					</dd>
+				<dl>
+			</tal:warning>	
+
 			<h1 class="documentFirstHeading">Manage portlets above content</h1>
 			<h2>Column A</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager1" />
