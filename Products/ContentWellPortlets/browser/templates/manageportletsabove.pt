@@ -10,12 +10,12 @@
 	            tal:attributes="href string:${context/absolute_url}/++resource++manage-portlets.kss"/>
 	    </div>
 	</head>
-	<body>
+	<body class="manage-portlet-well">
 
 		<div metal:fill-slot="portlets_one_slot">
 			<tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
 		</div>
-
+		
 		<div metal:fill-slot="main">
 
 			<tal:warning tal:condition="plone_view/isDefaultPageInFolder">
@@ -40,24 +40,38 @@
 				    Return
 				 </a>
 			</p>			
-			
+<div>			
+			<div class="portlet-well-manager">
 			<h2>Portlet well A</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager1" />
+			</div>
 
+			<div class="portlet-well-manager">
 			<h2>Portlet well B</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager2" />
+			</div>
 
+			<div class="portlet-well-manager">
 			<h2>Portlet well C</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager3" />
-			
+			</div>
+</div>
+<div>
+			<div class="portlet-well-manager">
 			<h2>Portlet well D</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager4" />
-			
+			</div>
+
+			<div class="portlet-well-manager">
 			<h2>Portlet well E</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager5" />
-			
+			</div>
+
+			<div class="portlet-well-manager">
 			<h2>Portlet well F</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager6" />
+			</div>
+</div>
 		</div>
 
 		<div metal:fill-slot="portlets_two_slot">

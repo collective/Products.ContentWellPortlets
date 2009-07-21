@@ -1,17 +1,20 @@
 <div id="portlets-above">
+	<tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent')">
+		
+		<div class="portletsAboveContentA" tal:content="structure provider:ContentWellPortlets.AbovePortletManager1" /> 
+
+		<div class="portletsAboveContentB" tal:content="structure provider:ContentWellPortlets.AbovePortletManager2" /> 
+
+		<div class="portletsAboveContentC" tal:content="structure provider:ContentWellPortlets.AbovePortletManager3" /> 
+
+		<div class="portletsAboveContentD" tal:content="structure provider:ContentWellPortlets.AbovePortletManager4" />
+
+		<div class="portletsAboveContentE" tal:content="structure provider:ContentWellPortlets.AbovePortletManager5" />
+
+		<div class="portletsAboveContentF" tal:content="structure provider:ContentWellPortlets.AbovePortletManager6" />
 	
-	<div class="portletsAboveContentA" tal:content="structure provider:ContentWellPortlets.AbovePortletManager1" /> 
+	</tal:block>
 
-	<div class="portletsAboveContentB" tal:content="structure provider:ContentWellPortlets.AbovePortletManager2" /> 
-
-	<div class="portletsAboveContentC" tal:content="structure provider:ContentWellPortlets.AbovePortletManager3" /> 
-
-	<div class="portletsAboveContentD" tal:content="structure provider:ContentWellPortlets.AbovePortletManager4" />
-
-	<div class="portletsAboveContentE" tal:content="structure provider:ContentWellPortlets.AbovePortletManager5" />
-
-	<div class="portletsAboveContentF" tal:content="structure provider:ContentWellPortlets.AbovePortletManager6" />
-	
 	<p class="managePortletsAboveLink"
 	   tal:condition="view/canManagePortlets">
 		<a href="" 

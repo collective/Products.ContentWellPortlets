@@ -14,8 +14,8 @@
 		<div metal:fill-slot="portlets_one_slot">
 			<tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
 		</div>
-
-		<div metal:fill-slot="main">
+<div class="manage-portlet-well">
+		<div metal:fill-slot="main" >
 			
 			<tal:warning tal:condition="plone_view/isDefaultPageInFolder">
 				<dl class="portalMessage warning">
@@ -57,7 +57,7 @@
 			<h2>Portlet well F</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager6" />
 		</div>
-
+</div>
 		<div metal:fill-slot="portlets_two_slot">
 			<tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
 		</div>
