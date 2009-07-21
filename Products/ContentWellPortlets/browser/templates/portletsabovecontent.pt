@@ -5,6 +5,12 @@
 	<div class="portletsAboveContentB" tal:content="structure provider:ContentWellPortlets.AbovePortletManager2" /> 
 
 	<div class="portletsAboveContentC" tal:content="structure provider:ContentWellPortlets.AbovePortletManager3" /> 
+
+	<div class="portletsAboveContentD" tal:content="structure provider:ContentWellPortlets.AbovePortletManager4" />
+
+	<div class="portletsAboveContentE" tal:content="structure provider:ContentWellPortlets.AbovePortletManager5" />
+
+	<div class="portletsAboveContentF" tal:content="structure provider:ContentWellPortlets.AbovePortletManager6" />
 	
 	<p class="managePortletsAboveLink"
 	   tal:condition="view/canManagePortlets">

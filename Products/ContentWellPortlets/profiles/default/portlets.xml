@@ -17,6 +17,21 @@
 	/>
 
 	<portletmanager 
+		 name="ContentWellPortlets.AbovePortletManager4"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+	/>
+	
+	<portletmanager 
+		 name="ContentWellPortlets.AbovePortletManager5"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+	/>
+
+	<portletmanager 
+		 name="ContentWellPortlets.AbovePortletManager6"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+	/>
+
+	<portletmanager 
 		 name="ContentWellPortlets.BelowPortletManager1"
 		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
 	/>
@@ -28,6 +43,21 @@
 
 	<portletmanager 
 		 name="ContentWellPortlets.BelowPortletManager3"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+	/>
+
+	<portletmanager 
+		 name="ContentWellPortlets.BelowPortletManager4"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+	/>
+
+	<portletmanager 
+		 name="ContentWellPortlets.BelowPortletManager5"
+		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+	/>
+
+	<portletmanager 
+		 name="ContentWellPortlets.BelowPortletManager6"
 		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
 	/>
 

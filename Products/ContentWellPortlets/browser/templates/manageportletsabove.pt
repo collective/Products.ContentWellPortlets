@@ -41,14 +41,23 @@
 				 </a>
 			</p>			
 			
-			<h2>Column A</h2>
+			<h2>Portlet well A</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager1" />
 
-			<h2>Column B</h2>
+			<h2>Portlet well B</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager2" />
 
-			<h2>Column C</h2>
+			<h2>Portlet well C</h2>
 			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager3" />
+			
+			<h2>Portlet well D</h2>
+			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager4" />
+			
+			<h2>Portlet well E</h2>
+			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager5" />
+			
+			<h2>Portlet well F</h2>
+			<span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager6" />
 		</div>
 
 		<div metal:fill-slot="portlets_two_slot">
