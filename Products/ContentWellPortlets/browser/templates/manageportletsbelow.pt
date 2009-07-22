@@ -38,24 +38,40 @@
 			       i18n:translate="return_to_view">
 			    Return
 			  </a>
-			</p>
-			<h2>Portlet well A</h2>
-			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager1" />
+			</p>	
+			
+			<div class="portlet-manager-row">
+				<div class="porlet-well_manager">
+					<h2>Portlet well A</h2>
+					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager1" />
+				</div>
+	
+				<div class="porlet-well_manager">
+					<h2>Porlet well B</h2>
+					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager2" />
+				</div>
+	
+				<div class="porlet-well_manager">
+					<h2>Portlet well C</h2>
+					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager3" />
+				</div>
+			</div>
+			<div class="portlet-manager-row">
+				<div class="porlet-well_manager">
+					<h2>Portlet well D</h2>
+					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager4" />
+				</div>
+	
+				<div class="porlet-well_manager">
+					<h2>Portlet well E</h2>
+					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager5" />
+				</div>
 
-			<h2>Porlet well B</h2>
-			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager2" />
-
-			<h2>Portlet well C</h2>
-			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager3" />
-
-			<h2>Portlet well D</h2>
-			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager4" />
-
-			<h2>Portlet well E</h2>
-			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager5" />
-
-			<h2>Portlet well F</h2>
-			<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager6" />
+				<div class="porlet-well_manager">
+					<h2>Portlet well F</h2>
+					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager6" />
+				</div>
+			</div>
 		</div>
 </div>
 		<div metal:fill-slot="portlets_two_slot">
