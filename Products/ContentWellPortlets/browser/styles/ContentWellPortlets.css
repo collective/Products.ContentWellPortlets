@@ -2,6 +2,7 @@
 .managePortletsBelowLink  {
     text-align:center;
     padding:0.5em;
+    clear:both;
 }
 .portlet-manager-row .porlet-well_manager { width: 30%; float:left; margin:1%; }
 .portlet-manager-row { width:100%; float:left; }
