@@ -24,3 +24,7 @@ class IPortletsBelowContent(IContentWellPortletManager):
 	 For the portlet manager below the content area.
 	 """
 
+class IFooterPortlets(IContentWellPortletManager):
+	 """
+	 For the portlet manager in the footer area.
+	 """

@@ -2,7 +2,7 @@
 	<tal:comment tal:replace="nothing">
 		 We only display the actual portlets if we are not on the portlet above content or below content managers.
 	</tal:comment>
-	<tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent')">	
+	<tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent') and not request.get('URL').endswith('@@manage-footerportlets')">	
 
 		<div class="portletsBelowContentA" tal:content="structure provider:ContentWellPortlets.BelowPortletManager1" /> 
 

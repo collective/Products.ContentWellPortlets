@@ -1,5 +1,6 @@
 .managePortletsAboveLink,
-.managePortletsBelowLink  {
+.managePortletsBelowLink,
+.manageFooterPortletsLink  {
     text-align:center;
     padding:0.5em;
     clear:both;

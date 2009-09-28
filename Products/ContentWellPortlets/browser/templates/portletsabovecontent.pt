@@ -1,5 +1,5 @@
 <div id="portlets-above">
-	<tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent')">
+	<tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent') and not request.get('URL').endswith('@@manage-footerportlets')">	
 		
 		<div class="portletsAboveContentA" tal:content="structure provider:ContentWellPortlets.AbovePortletManager1" /> 
 

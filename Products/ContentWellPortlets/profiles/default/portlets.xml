@@ -60,5 +60,33 @@
 		 name="ContentWellPortlets.BelowPortletManager6"
 		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
 	/>
+	<portletmanager 
+		 name="ContentWellPortlets.FooterPortletManager1"
+		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+	/>
 
+	<portletmanager 
+		 name="ContentWellPortlets.FooterPortletManager2"
+		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+	/>
+
+	<portletmanager 
+		 name="ContentWellPortlets.FooterPortletManager3"
+		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+	/>
+
+	<portletmanager 
+		 name="ContentWellPortlets.FooterPortletManager4"
+		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+	/>
+
+	<portletmanager 
+		 name="ContentWellPortlets.FooterPortletManager5"
+		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+	/>
+
+	<portletmanager 
+		 name="ContentWellPortlets.FooterPortletManager6"
+		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+	/>
 </portlets>

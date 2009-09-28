@@ -6,4 +6,10 @@
 		<viewlet name = "contentwellportlets.portletsabovecontent" insert-before = "plone.contentviews" />
 		<viewlet name = "plone.contentviews" insert-before = "plone.contentactions" />
 	</order>
+	<order manager="plone.portalfooter" skinname="*">
+  		<viewlet name="contentwellportlets.footerportlets" insert-before = "plone.footer"/> 
+  		<viewlet name="plone.footer" />
+		<viewlet name="plone.colophon"/>
+ </order>
+
 </object>

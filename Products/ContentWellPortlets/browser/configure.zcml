@@ -6,7 +6,8 @@
 
 <!-- the following line needs to be present if the package is to be installed as an egg -->
 	<include package ="plone.app.portlets" />
-
+	
+<!-- PORTLETS ABOVE CONTENT -->
 <!-- add a viewlet to the top of the content well -->
 	<browser:viewlet
 		 name="contentwellportlets.portletsabovecontent"
@@ -25,6 +26,8 @@
 		 permission="plone.app.portlets.ManagePortlets"
 	/>
 
+
+<!-- PORTLETS BELOW CONTENT -->
 <!-- add a viewlet to the bottom of the content well -->
 	<browser:viewlet
 		 name="contentwellportlets.portletsbelowcontent"
@@ -42,7 +45,28 @@
 		 template="templates/manageportletsbelow.pt"
 		 permission="plone.app.portlets.ManagePortlets"
 	/>
+	
+	
+<!-- FOOTER PORTLETS -->
+<!-- add a viewlet to the footer area -->
+	<browser:viewlet
+		 name="contentwellportlets.footerportlets"
+		 class=".viewlets.FooterPortletsViewlet"
+		 manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+		 layer=".interfaces.IContentWellPortlets"
+		 permission="zope2.View" 
+	/> 
 
+<!-- add a management view for the portlet manager -->
+	<browser:page
+		 name="manage-footerportlets"
+		 for="plone.portlets.interfaces.ILocalPortletAssignable"
+		 class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+		 template="templates/managefooterportlets.pt"
+		 permission="plone.app.portlets.ManagePortlets"
+	/>
+	
+<!-- RESOURCE DIRECTORIES -->	
 <!-- Register the resource directory for stylesheets -->
     <browser:resourceDirectory
         name="ContentWellPortlets.styles"
@@ -50,6 +74,8 @@
         layer=".interfaces.IContentWellPortlets"
         />
 
+
+<!-- ADAPTERS -->
 <!-- make an adapter for our very own renderer -->
 <adapter
 	factory="Products.ContentWellPortlets.browser.manager.ContentWellPortletRenderer"
