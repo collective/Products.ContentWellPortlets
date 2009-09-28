@@ -1,0 +1,26 @@
+<div id="footer-portlets">
+	<tal:comment tal:replace="nothing">
+		 We only display the actual portlets if we are not on the portlet above content, below content, or footer managers.
+	</tal:comment>
+	<tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent') and not request.get('URL').endswith('@@manage-footerportlets')">	
+
+		<div class="FooterPortletA" tal:content="structure provider:ContentWellPortlets.FooterPortletManager1" /> 
+
+		<div class="FooterPortletB" tal:content="structure provider:ContentWellPortlets.FooterPortletManager2" /> 
+
+		<div class="FooterPortletC" tal:content="structure provider:ContentWellPortlets.FooterPortletManager3" /> 
+
+		<div class="FooterPortletD" tal:content="structure provider:ContentWellPortlets.FooterPortletManager4" />
+
+		<div class="FooterPortletE" tal:content="structure provider:ContentWellPortlets.FooterPortletManager5" />
+
+		<div class="FooterPortletF" tal:content="structure provider:ContentWellPortlets.FooterPortletManager6" />
+	
+	</tal:block>
+
+	<p class="manageFooterPortletsLink"
+	   tal:condition="view/canManagePortlets">
+		<a href="" 
+		   tal:attributes="href view/manageUrl">Add, edit or remove a portlet in the footer</a>
+	</p>
+</div>
