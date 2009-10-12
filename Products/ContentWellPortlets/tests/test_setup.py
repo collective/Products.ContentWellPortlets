@@ -26,7 +26,7 @@ class TestSetup(ContentWellPortletsTestCase):
         from Products.ContentWellPortlets.browser.interfaces import IContentWellPortlets
         self.failUnless(IContentWellPortlets in utils.registered_layers(), 'Cannot find IContentWellPortlets interface')
     
-    def testPortletManagersAbove(self):
+    def testPortletManagers(self):
         '''
         Are our portlet managers available? Test by inserting a calendar portlet
         '''
@@ -35,12 +35,20 @@ class TestSetup(ContentWellPortletsTestCase):
         from plone.portlets.interfaces import IPortletManager
         from plone.portlets.interfaces import IPortletRenderer
 
-        # get the portlet manager we should have created
-        manager = getUtility(IPortletManager, name='ContentWellPortlets.AbovePortletManager1',context=self.portal)
+        # get the portlet managers we should have created
+        managerAbove = getUtility(IPortletManager, name='ContentWellPortlets.AbovePortletManager1',context=self.portal)
+        managerBelow = getUtility(IPortletManager, name='ContentWellPortlets.BelowPortletManager1',context=self.portal)
+        managerFooter = getUtility(IPortletManager, name='ContentWellPortlets.FooterPortletManager1',context=self.portal)
         
         # try rendering a portlet with it using getMultiAdapter((context, request, view, manager, assignment), Interface)
-        renderer = getMultiAdapter((self.folder, self.folder.REQUEST, self.folder.restrictedTraverse('@@plone'), manager, calendar.Assignment()), IPortletRenderer)
+        renderer = getMultiAdapter((self.folder, self.folder.REQUEST, self.folder.restrictedTraverse('@@plone'), managerAbove, calendar.Assignment()), IPortletRenderer)
         self.failUnless(isinstance(renderer, calendar.Renderer), 'Cannot render portlet above contents')
+        
+        renderer = getMultiAdapter((self.folder, self.folder.REQUEST, self.folder.restrictedTraverse('@@plone'), managerBelow, calendar.Assignment()), IPortletRenderer)
+        self.failUnless(isinstance(renderer, calendar.Renderer), 'Cannot render portlet below contents')
+        
+        renderer = getMultiAdapter((self.folder, self.folder.REQUEST, self.folder.restrictedTraverse('@@plone'), managerFooter, calendar.Assignment()), IPortletRenderer)
+        self.failUnless(isinstance(renderer, calendar.Renderer), 'Cannot render footer portlet contents')
         
 def test_suite():
     suite = unittest.TestSuite()

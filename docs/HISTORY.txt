@@ -16,3 +16,12 @@ Changelog
 
 * Added our own portlet manager renderer (closes ticket #952)
 * Got rid of CSS associated with the previous (fudge) method of rendering we were using
+
+2.0 (2009-10-12)
+----------------
+
+* Adds Footer portlets
+* Adds extra portlet managers to each content well portlet area (6 per area: above content, below content, and footer) - 18 total
+* Included extra example css in README.txt
+* Cleaned up manager UI
+* Adds warning message when on a default view of a container.
