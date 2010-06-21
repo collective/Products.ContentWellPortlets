@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '2.1'
+version = '1.1'
 
 setup(name='Products.ContentWellPortlets',
       version=version,
