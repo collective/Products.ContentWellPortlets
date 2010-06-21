@@ -1,6 +1,15 @@
 Changelog
 =========
 
+1.1 (2010-06-21)
+----------------
+
+* Move "above" portlets to IAboveContent viewlet manager.
+  [esteele]
+  
+* Tweak styling of "manage portlets" links, add managePortletsFallback class.
+  [esteele]
+
 1.0 (2008-12-16)
 ----------------
 

@@ -21,6 +21,7 @@
 	<p class="managePortletsBelowLink"
 	   tal:condition="view/canManagePortlets">
 		<a href="" 
+		   class="managePortletsFallback"
 		   tal:attributes="href view/manageUrl">Add, edit or remove a portlet below the content</a>
 	</p>
 </div>
