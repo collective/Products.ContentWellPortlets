@@ -1,9 +1,11 @@
+# Leonardo J. Caballero G., 2010.
+# Héctor Velarde, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentWellPortlets 2.0\n"
 "POT-Creation-Date: 2010-01-18 11:56+0000\n"
 "PO-Revision-Date: 2010-01-18 09:34-0400\n"
-"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Last-Translator: Héctor Velarde <hector.velarde@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -18,15 +20,15 @@ msgstr ""
 #. Default: "Add, edit or remove a portlet in the footer"
 #: ../browser/templates/footerportlets.pt:23
 msgid "manage-footer-portlet-link"
-msgstr "Agregar, editar y remover un portlet en la carpeta"
+msgstr "Agregar, editar o eliminar un portlet al pie de la página"
 
 #. Default: "Add, edit or remove a portlet above the content"
 #: ../browser/templates/portletsabovecontent.pt:20
 msgid "manage_portlets_above_link"
-msgstr "Agregar, editar y remover un portlet por encima del contenido"
+msgstr "Agregar, editar o eliminar un portlet encima del contenido"
 
 #. Default: "Add, edit or remove a portlet below the content"
 #: ../browser/templates/portletsbelowcontent.pt:23
 msgid "manage_portlets_below_link"
-msgstr "Agregar, editar y remover un portlet seguido del contenido"
+msgstr "Agregar, editar o eliminar un portlet debajo del contenido"
 
