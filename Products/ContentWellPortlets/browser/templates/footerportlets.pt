@@ -1,4 +1,4 @@
-<div id="footer-portlets">
+<div id="footer-portlets" i18n:domain="Products.ContentWellPortlets">
 	<tal:comment tal:replace="nothing">
 		 We only display the actual portlets if we are not on the portlet above content, below content, or footer managers.
 	</tal:comment>
@@ -22,6 +22,7 @@
 	   tal:condition="view/canManagePortlets">
 		<a href="" 
 		   class="managePortletsFallback"
-		   tal:attributes="href view/manageUrl">Add, edit or remove a portlet in the footer</a>
+		   tal:attributes="href view/manageUrl"
+		   i18n:translate="manage-footer-portlet-link">Add, edit or remove a portlet in the footer</a>
 	</p>
 </div>

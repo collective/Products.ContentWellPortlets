@@ -4,6 +4,12 @@ Changelog
 2.2 (Unreleased)
 ----------------
 
+* Added Spanish translation
+  [macagua]
+
+* Added support for i18n
+  [macagua]
+
 2.1 (2010-06-21)
 ----------------
 

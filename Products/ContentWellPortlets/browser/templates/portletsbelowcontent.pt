@@ -1,4 +1,4 @@
-<div id="portlets-below">
+<div id="portlets-below" i18n:domain="Products.ContentWellPortlets">
 	<tal:comment tal:replace="nothing">
 		 We only display the actual portlets if we are not on the portlet above content or below content managers.
 	</tal:comment>
@@ -22,6 +22,7 @@
 	   tal:condition="view/canManagePortlets">
 		<a href="" 
 		   class="managePortletsFallback"
-		   tal:attributes="href view/manageUrl">Add, edit or remove a portlet below the content</a>
+		   tal:attributes="href view/manageUrl"
+		   i18n:translate="manage_portlets_below_link">Add, edit or remove a portlet below the content</a>
 	</p>
 </div>

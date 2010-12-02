@@ -19,17 +19,19 @@
 			
 			<tal:warning tal:condition="plone_view/isDefaultPageInFolder">
 				<dl class="portalMessage warning">
-					<dt>Is this really where you want to add portlets below the content?</dt>
-					<dd>If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, 
+					<dt i18n:translate="message_warning_below_content_area_dt">Is this really where you want to add portlets below the content?</dt>
+					<dd i18n:translate="message_warning_below_content_area_dd">If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, 
 						<a href=""
-						   tal:attributes="href string:${plone_view/getCurrentFolderUrl}/@@manage-portletsbelowcontent">
-							add them to the folder itself
+						   tal:attributes="href string:${plone_view/getCurrentFolderUrl}/@@manage-portletsbelowcontent"
+						   i18n:name="manage-portletsbelowcontent_link">
+							<span i18n:translate="add_them_to_the_folder_itself">add them to the folder itself</span>
 						</a>
 					</dd>
 				<dl>
 			</tal:warning>	
 
-			<h1 class="documentFirstHeading">Manage portlets below content</h1>
+			<h1 class="documentFirstHeading"
+			    i18n:translate="manage_portlets_below_content">Manage portlets below content</h1>
 			
 			<p>
 			  <a href=""
@@ -42,33 +44,33 @@
 			
 			<div class="portlet-manager-row">
 				<div class="porlet-well_manager">
-					<h2>Portlet well A</h2>
+					<h2 i18n:translate="portlet-well-a">Portlet well A</h2>
 					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager1" />
 				</div>
 	
 				<div class="porlet-well_manager">
-					<h2>Porlet well B</h2>
+					<h2 i18n:translate="portlet-well-b">Porlet well B</h2>
 					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager2" />
 				</div>
 	
 				<div class="porlet-well_manager">
-					<h2>Portlet well C</h2>
+					<h2 i18n:translate="portlet-well-c">Portlet well C</h2>
 					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager3" />
 				</div>
 			</div>
 			<div class="portlet-manager-row">
 				<div class="porlet-well_manager">
-					<h2>Portlet well D</h2>
+					<h2 i18n:translate="portlet-well-d">Portlet well D</h2>
 					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager4" />
 				</div>
 	
 				<div class="porlet-well_manager">
-					<h2>Portlet well E</h2>
+					<h2 i18n:translate="portlet-well-e">Portlet well E</h2>
 					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager5" />
 				</div>
 
 				<div class="porlet-well_manager">
-					<h2>Portlet well F</h2>
+					<h2 i18n:translate="portlet-well-f">Portlet well F</h2>
 					<span tal:replace="structure provider:ContentWellPortlets.BelowPortletManager6" />
 				</div>
 			</div>
