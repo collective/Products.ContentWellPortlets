@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ContentWellPortlets 2.0\n"
 "POT-Creation-Date: 2010-01-18 11:56+0000\n"
-"PO-Revision-Date: 2010-01-18 09:33-0400\n"
+"PO-Revision-Date: 2010-12-02 11:55-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,9 +17,8 @@ msgstr ""
 
 #. Default: "add them to the folder itself"
 #: ../browser/templates/manageportletsabove.pt:28
-#, fuzzy
 msgid "add_them_to_the_folder_itself"
-msgstr "Agregar entonces a la carpeta misma"
+msgstr "agregarlos a la carpeta en sí"
 
 #. Default: "Footer Portlet A"
 #: ../browser/templates/managefooterportlets.pt:47
@@ -68,75 +67,63 @@ msgstr "Administrar portlets de pie de página"
 
 #. Default: "If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, ${manage-portletsabovecontent_link}"
 #: ../browser/templates/manageportletsabove.pt:25
-#, fuzzy
 msgid "message_warning_above_content_area_dd"
 msgstr "Si usted quiere agregar portlets aquí, ellos solamente aparecerán en este elemento. Si en cambio usted quiere que los portlets aparezcan en todos los elementos en esta carpeta, ${manage-portletsabovecontent_link}"
 
 #. Default: "Is this really where you want to add portlets above the content?"
 #: ../browser/templates/manageportletsabove.pt:23
-#, fuzzy
 msgid "message_warning_above_content_area_dt"
-msgstr "¿Este es realmente donde usted quiere agregar portlets encima del contenido?"
+msgstr "¿Este es realmente el lugar donde usted quiere agregar portlets en el área sobre el contenido?"
 
 #. Default: "If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, ${manage-portletsbelowcontent_link}"
 #: ../browser/templates/manageportletsbelow.pt:24
-#, fuzzy
 msgid "message_warning_below_content_area_dd"
 msgstr "Si usted quiere agregar portlets aquí, ellos solamente aparecerán en este elemento. Si en cambio usted quiere que los portlets aparezcan en todos los elementos en esta carpeta, ${manage-portletsbelowcontent_link}"
 
 #. Default: "Is this really where you want to add portlets below the content?"
 #: ../browser/templates/manageportletsbelow.pt:22
-#, fuzzy
 msgid "message_warning_below_content_area_dt"
-msgstr "¿Este es realmente donde usted quiere agregar portlets seguida del contenido?"
+msgstr "¿Este es realmente el lugar donde usted quiere agregar portlets en el área seguida del contenido?"
 
 #. Default: "If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, ${manage-footerportlets_link}"
 #: ../browser/templates/managefooterportlets.pt:25
-#, fuzzy
 msgid "message_warning_footer_area_dd"
 msgstr "Si usted quiere agregar portlets aquí, ellos solamente aparecerán en este elemento. Si en cambio usted quiere que los portlets aparezcan en todos los elementos en esta carpeta, ${manage-footerportlets_link}"
 
 #. Default: "Is this really where you want to add portlets in the footer area?"
 #: ../browser/templates/managefooterportlets.pt:23
-#, fuzzy
 msgid "message_warning_footer_area_dt"
-msgstr "¿Este es realmente donde usted quiere agregar portlets en el área de pie de página?"
+msgstr "¿Este es realmente el lugar donde usted quiere agregar portlets en el área de pie de página?"
 
 #. Default: "Portlet well A"
 #: ../browser/templates/manageportletsabove.pt:47
-#, fuzzy
 msgid "portlet-well-a"
-msgstr "Portlets A"
+msgstr "Portlet A"
 
 #. Default: "Portlet well B"
 #: ../browser/templates/manageportletsabove.pt:52
-#, fuzzy
 msgid "portlet-well-b"
-msgstr "Portlets B"
+msgstr "Portlet B"
 
 #. Default: "Portlet well C"
 #: ../browser/templates/manageportletsabove.pt:57
-#, fuzzy
 msgid "portlet-well-c"
-msgstr "Portlets C"
+msgstr "Portlet C"
 
 #. Default: "Portlet well D"
 #: ../browser/templates/manageportletsabove.pt:63
-#, fuzzy
 msgid "portlet-well-d"
-msgstr "Portlets D"
+msgstr "Portlet D"
 
 #. Default: "Portlet well E"
 #: ../browser/templates/manageportletsabove.pt:68
-#, fuzzy
 msgid "portlet-well-e"
-msgstr "Portlets E"
+msgstr "Portlet E"
 
 #. Default: "Portlet well F"
 #: ../browser/templates/manageportletsabove.pt:73
-#, fuzzy
 msgid "portlet-well-f"
-msgstr "Portlets F"
+msgstr "Portlet F"
 
 #. Default: "Return"
 #: ../browser/templates/manageportletsabove.pt:38
