@@ -1,4 +1,5 @@
-<div id="portlets-below" i18n:domain="Products.ContentWellPortlets">
+<div id="portlets-below"
+     i18n:domain="Products.ContentWellPortlets">
 	<tal:comment tal:replace="nothing">
 		 We only display the actual portlets if we are not on the portlet above content or below content managers.
 	</tal:comment>
