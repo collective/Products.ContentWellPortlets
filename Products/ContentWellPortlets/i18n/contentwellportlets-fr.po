@@ -72,7 +72,7 @@ msgstr "Ajouter, éditer ou supprimer un portlet au-dessus du contenu"
 #. Default: "Manage portlets below content"
 #: ../browser/templates/manageportletsbelow.pt:33
 msgid "manage_portlets_below_content"
-msgstr "Gérer les portlets au-dessus du contenu"
+msgstr "Gérer les portlets en-dessous du contenu"
 
 #. Default: "Add, edit or remove a portlet below the content"
 #: ../browser/templates/portletsbelowcontent.pt:24
@@ -97,7 +97,7 @@ msgstr "Souhaitez-vous vraiment ajouter des portlets ici ?"
 #. Default: "If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, ${manage-portletsbelowcontent_link}"
 #: ../browser/templates/manageportletsbelow.pt:24
 msgid "message_warning_below_content_area_dd"
-msgstr "Si vous ajoutez des portlets ici, ils n'apparaitront que pour cet élément. Pour que les portlets apparaissent pour tous les éléments du dossier, ${manage-portletsabovecontent_link}"
+msgstr "Si vous ajoutez des portlets ici, ils n'apparaitront que pour cet élément. Pour que les portlets apparaissent pour tous les éléments du dossier, ${manage-portletsbelowcontent_link}"
 
 #. Default: "Is this really where you want to add portlets below the content?"
 #: ../browser/templates/manageportletsbelow.pt:22
@@ -107,7 +107,7 @@ msgstr "Souhaitez-vous vraiment ajouter des portlets ici ?"
 #. Default: "If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, ${manage-footerportlets_link}"
 #: ../browser/templates/managefooterportlets.pt:25
 msgid "message_warning_footer_area_dd"
-msgstr "Si vous ajoutez des portlets ici, ils n'apparaitront que pour cet élément. Pour que les portlets apparaissent pour tous les éléments du dossier, ${manage-portletsabovecontent_link}"
+msgstr "Si vous ajoutez des portlets ici, ils n'apparaitront que pour cet élément. Pour que les portlets apparaissent pour tous les éléments du dossier, ${manage-footerportlets_link}"
 
 #. Default: "Is this really where you want to add portlets in the footer area?"
 #: ../browser/templates/managefooterportlets.pt:23
