@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-12-02 23:20+0000\n"
+"POT-Creation-Date: 2011-01-24 09:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,8 @@ msgstr ""
 
 #. Default: "add them to the folder itself"
 #: ../browser/templates/managefooterportlets.pt:28
+#: ../browser/templates/manageportletsabove.pt:28
+#: ../browser/templates/manageportletsbelow.pt:27
 msgid "add_them_to_the_folder_itself"
 msgstr ""
 
@@ -114,36 +116,44 @@ msgstr ""
 
 #. Default: "Portlet well A"
 #: ../browser/templates/manageportletsabove.pt:47
+#: ../browser/templates/manageportletsbelow.pt:47
 msgid "portlet-well-a"
 msgstr ""
 
 #. Default: "Portlet well B"
 #: ../browser/templates/manageportletsabove.pt:52
+#: ../browser/templates/manageportletsbelow.pt:52
 msgid "portlet-well-b"
 msgstr ""
 
 #. Default: "Portlet well C"
 #: ../browser/templates/manageportletsabove.pt:57
+#: ../browser/templates/manageportletsbelow.pt:57
 msgid "portlet-well-c"
 msgstr ""
 
 #. Default: "Portlet well D"
 #: ../browser/templates/manageportletsabove.pt:63
+#: ../browser/templates/manageportletsbelow.pt:63
 msgid "portlet-well-d"
 msgstr ""
 
 #. Default: "Portlet well E"
 #: ../browser/templates/manageportletsabove.pt:68
+#: ../browser/templates/manageportletsbelow.pt:68
 msgid "portlet-well-e"
 msgstr ""
 
 #. Default: "Portlet well F"
 #: ../browser/templates/manageportletsabove.pt:73
+#: ../browser/templates/manageportletsbelow.pt:73
 msgid "portlet-well-f"
 msgstr ""
 
 #. Default: "Return"
 #: ../browser/templates/managefooterportlets.pt:38
+#: ../browser/templates/manageportletsabove.pt:38
+#: ../browser/templates/manageportletsbelow.pt:37
 msgid "return_to_view"
 msgstr ""
 

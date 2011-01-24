@@ -4,6 +4,9 @@ Changelog
 2.2 (Unreleased)
 ----------------
 
+* Added French translation
+  [kiorky,numahell]
+
 * Added Spanish translation
   [macagua]
 
