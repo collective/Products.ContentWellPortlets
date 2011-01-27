@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '2.2'
+version = '3.0'
 
 setup(name='Products.ContentWellPortlets',
       version=version,
@@ -25,6 +25,7 @@ setup(name='Products.ContentWellPortlets',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'Plone>=4.0'
           # -*- Extra requirements: -*-
       ],
       entry_points="""
