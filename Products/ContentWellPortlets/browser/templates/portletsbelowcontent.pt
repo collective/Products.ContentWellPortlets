@@ -1,29 +1,29 @@
 <div id="portlets-below"
      i18n:domain="Products.ContentWellPortlets">
-	<tal:comment tal:replace="nothing">
-		 We only display the actual portlets if we are not on the portlet above content or below content managers.
-	</tal:comment>
-	<tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent') and not request.get('URL').endswith('@@manage-footerportlets')">	
+    <tal:comment tal:replace="nothing">
+         We only display the actual portlets if we are not on the portlet above content or below content managers.
+    </tal:comment>
+    <tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent') and not request.get('URL').endswith('@@manage-footerportlets')">    
 
-		<div class="portletsBelowContentA" tal:content="structure provider:ContentWellPortlets.BelowPortletManager1" /> 
+        <div class="portletsBelowContentA" tal:content="structure provider:ContentWellPortlets.BelowPortletManager1" /> 
 
-		<div class="portletsBelowContentB" tal:content="structure provider:ContentWellPortlets.BelowPortletManager2" /> 
+        <div class="portletsBelowContentB" tal:content="structure provider:ContentWellPortlets.BelowPortletManager2" /> 
 
-		<div class="portletsBelowContentC" tal:content="structure provider:ContentWellPortlets.BelowPortletManager3" /> 
+        <div class="portletsBelowContentC" tal:content="structure provider:ContentWellPortlets.BelowPortletManager3" /> 
 
-		<div class="portletsBelowContentD" tal:content="structure provider:ContentWellPortlets.BelowPortletManager4" />
+        <div class="portletsBelowContentD" tal:content="structure provider:ContentWellPortlets.BelowPortletManager4" />
 
-		<div class="portletsBelowContentE" tal:content="structure provider:ContentWellPortlets.BelowPortletManager5" />
+        <div class="portletsBelowContentE" tal:content="structure provider:ContentWellPortlets.BelowPortletManager5" />
 
-		<div class="portletsBelowContentF" tal:content="structure provider:ContentWellPortlets.BelowPortletManager6" />
-	
-	</tal:block>
+        <div class="portletsBelowContentF" tal:content="structure provider:ContentWellPortlets.BelowPortletManager6" />
+    
+    </tal:block>
 
-	<p class="managePortletsBelowLink"
-	   tal:condition="view/canManagePortlets">
-		<a href="" 
-		   class="managePortletsFallback"
-		   tal:attributes="href view/manageUrl"
-		   i18n:translate="manage_portlets_below_link">Add, edit or remove a portlet below the content</a>
-	</p>
+    <p class="managePortletsBelowLink"
+       tal:condition="view/canManagePortlets">
+        <a href="" 
+           class="managePortletsFallback"
+           tal:attributes="href view/manageUrl"
+           i18n:translate="manage_portlets_below_link">Add, edit or remove a portlet below the content</a>
+    </p>
 </div>

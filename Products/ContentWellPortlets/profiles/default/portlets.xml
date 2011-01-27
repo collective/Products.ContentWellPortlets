@@ -1,92 +1,92 @@
 <?xml version="1.0"?>
 <!-- Set up all the new portlet managers we need above and below the content well -->
 <portlets>
-	<portletmanager 
-		 name="ContentWellPortlets.AbovePortletManager1"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.AbovePortletManager1"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.AbovePortletManager2"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.AbovePortletManager2"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.AbovePortletManager3"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.AbovePortletManager3"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.AbovePortletManager4"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
-	/>
-	
-	<portletmanager 
-		 name="ContentWellPortlets.AbovePortletManager5"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.AbovePortletManager4"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+    />
+    
+    <portletmanager 
+         name="ContentWellPortlets.AbovePortletManager5"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.AbovePortletManager6"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.AbovePortletManager6"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.BelowPortletManager1"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.BelowPortletManager1"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.BelowPortletManager2"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.BelowPortletManager2"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.BelowPortletManager3"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.BelowPortletManager3"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.BelowPortletManager4"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.BelowPortletManager4"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.BelowPortletManager5"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.BelowPortletManager5"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.BelowPortletManager6"
-		 type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
-	/>
-	<portletmanager 
-		 name="ContentWellPortlets.FooterPortletManager1"
-		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.BelowPortletManager6"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContent"
+    />
+    <portletmanager 
+         name="ContentWellPortlets.FooterPortletManager1"
+         type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.FooterPortletManager2"
-		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.FooterPortletManager2"
+         type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.FooterPortletManager3"
-		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.FooterPortletManager3"
+         type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.FooterPortletManager4"
-		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.FooterPortletManager4"
+         type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.FooterPortletManager5"
-		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.FooterPortletManager5"
+         type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+    />
 
-	<portletmanager 
-		 name="ContentWellPortlets.FooterPortletManager6"
-		 type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
-	/>
+    <portletmanager 
+         name="ContentWellPortlets.FooterPortletManager6"
+         type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
+    />
 </portlets>

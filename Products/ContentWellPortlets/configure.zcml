@@ -11,14 +11,14 @@
     <i18n:registerTranslations directory="locales" />
 
 <!-- register the Generic Setup extension profile -->
-	<genericsetup:registerProfile
-	      name="default"
-	      title="ContentWellPortlets"
-	      directory="profiles/default"
-	      description="Extension profile for Products.ContentWellPortlets"
-	      provides="Products.GenericSetup.interfaces.EXTENSION"
-	      i18n:attributes="title gs_profiles_default_title;
-	                       description gs_profiles_default_description;"
-	      />
+    <genericsetup:registerProfile
+          name="default"
+          title="ContentWellPortlets"
+          directory="profiles/default"
+          description="Extension profile for Products.ContentWellPortlets"
+          provides="Products.GenericSetup.interfaces.EXTENSION"
+          i18n:attributes="title gs_profiles_default_title;
+                           description gs_profiles_default_description;"
+          />
 
 </configure>

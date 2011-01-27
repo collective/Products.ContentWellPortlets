@@ -1,26 +1,26 @@
 <div id="portlets-above"
      i18n:domain="Products.ContentWellPortlets">
-	<tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent') and not request.get('URL').endswith('@@manage-footerportlets')">	
-		
-		<div class="portletsAboveContentA" tal:content="structure provider:ContentWellPortlets.AbovePortletManager1" /> 
+    <tal:block tal:condition="python: not request.get('URL').endswith('@@manage-portletsabovecontent') and not request.get('URL').endswith('@@manage-portletsbelowcontent') and not request.get('URL').endswith('@@manage-footerportlets')">    
+        
+        <div class="portletsAboveContentA" tal:content="structure provider:ContentWellPortlets.AbovePortletManager1" /> 
 
-		<div class="portletsAboveContentB" tal:content="structure provider:ContentWellPortlets.AbovePortletManager2" /> 
+        <div class="portletsAboveContentB" tal:content="structure provider:ContentWellPortlets.AbovePortletManager2" /> 
 
-		<div class="portletsAboveContentC" tal:content="structure provider:ContentWellPortlets.AbovePortletManager3" /> 
+        <div class="portletsAboveContentC" tal:content="structure provider:ContentWellPortlets.AbovePortletManager3" /> 
 
-		<div class="portletsAboveContentD" tal:content="structure provider:ContentWellPortlets.AbovePortletManager4" />
+        <div class="portletsAboveContentD" tal:content="structure provider:ContentWellPortlets.AbovePortletManager4" />
 
-		<div class="portletsAboveContentE" tal:content="structure provider:ContentWellPortlets.AbovePortletManager5" />
+        <div class="portletsAboveContentE" tal:content="structure provider:ContentWellPortlets.AbovePortletManager5" />
 
-		<div class="portletsAboveContentF" tal:content="structure provider:ContentWellPortlets.AbovePortletManager6" />
-	
-	</tal:block>
+        <div class="portletsAboveContentF" tal:content="structure provider:ContentWellPortlets.AbovePortletManager6" />
+    
+    </tal:block>
 
-	<p class="managePortletsAboveLink"
-	   tal:condition="view/canManagePortlets">
-		<a href="" 
-		   class="managePortletsFallback"
-		   tal:attributes="href view/manageUrl"
-		   i18n:translate="manage_portlets_above_link">Add, edit or remove a portlet above the content</a>
-	</p>
+    <p class="managePortletsAboveLink"
+       tal:condition="view/canManagePortlets">
+        <a href="" 
+           class="managePortletsFallback"
+           tal:attributes="href view/manageUrl"
+           i18n:translate="manage_portlets_above_link">Add, edit or remove a portlet above the content</a>
+    </p>
 </div>

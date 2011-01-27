@@ -2,71 +2,71 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
-	i18n_domain="Products.ContentWellPortlets">
+    i18n_domain="Products.ContentWellPortlets">
 
 <!-- the following line needs to be present if the package is to be installed as an egg -->
-	<include package ="plone.app.portlets" />
-	
+    <include package ="plone.app.portlets" />
+    
 <!-- PORTLETS ABOVE CONTENT -->
 <!-- add a viewlet to the top of the content well -->
-	<browser:viewlet
-		 name="contentwellportlets.portletsabovecontent"
-		 class=".viewlets.PortletsAboveViewlet"
-		 manager="plone.app.layout.viewlets.interfaces.IAboveContent"
-		 layer=".interfaces.IContentWellPortlets"
-		 permission="zope2.View" 
-	/> 
+    <browser:viewlet
+         name="contentwellportlets.portletsabovecontent"
+         class=".viewlets.PortletsAboveViewlet"
+         manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+         layer=".interfaces.IContentWellPortlets"
+         permission="zope2.View" 
+    /> 
 
 <!-- add a management view for the portlet manager -->
-	<browser:page
-		 name="manage-portletsabovecontent"
-		 for="plone.portlets.interfaces.ILocalPortletAssignable"
-		 class="plone.app.portlets.browser.manage.ManageContextualPortlets"
-		 template="templates/manageportletsabove.pt"
-		 permission="plone.app.portlets.ManagePortlets"
-	/>
+    <browser:page
+         name="manage-portletsabovecontent"
+         for="plone.portlets.interfaces.ILocalPortletAssignable"
+         class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+         template="templates/manageportletsabove.pt"
+         permission="plone.app.portlets.ManagePortlets"
+    />
 
 
 <!-- PORTLETS BELOW CONTENT -->
 <!-- add a viewlet to the bottom of the content well -->
-	<browser:viewlet
-		 name="contentwellportlets.portletsbelowcontent"
-		 class=".viewlets.PortletsBelowViewlet"
-		 manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-		 layer=".interfaces.IContentWellPortlets"
-		 permission="zope2.View" 
-	/> 
+    <browser:viewlet
+         name="contentwellportlets.portletsbelowcontent"
+         class=".viewlets.PortletsBelowViewlet"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         layer=".interfaces.IContentWellPortlets"
+         permission="zope2.View" 
+    /> 
 
 <!-- add a management view for the portlet manager -->
-	<browser:page
-		 name="manage-portletsbelowcontent"
-		 for="plone.portlets.interfaces.ILocalPortletAssignable"
-		 class="plone.app.portlets.browser.manage.ManageContextualPortlets"
-		 template="templates/manageportletsbelow.pt"
-		 permission="plone.app.portlets.ManagePortlets"
-	/>
-	
-	
+    <browser:page
+         name="manage-portletsbelowcontent"
+         for="plone.portlets.interfaces.ILocalPortletAssignable"
+         class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+         template="templates/manageportletsbelow.pt"
+         permission="plone.app.portlets.ManagePortlets"
+    />
+    
+    
 <!-- FOOTER PORTLETS -->
 <!-- add a viewlet to the footer area -->
-	<browser:viewlet
-		 name="contentwellportlets.footerportlets"
-		 class=".viewlets.FooterPortletsViewlet"
-		 manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-		 layer=".interfaces.IContentWellPortlets"
-		 permission="zope2.View" 
-	/> 
+    <browser:viewlet
+         name="contentwellportlets.footerportlets"
+         class=".viewlets.FooterPortletsViewlet"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         layer=".interfaces.IContentWellPortlets"
+         permission="zope2.View" 
+    /> 
 
 <!-- add a management view for the portlet manager -->
-	<browser:page
-		 name="manage-footerportlets"
-		 for="plone.portlets.interfaces.ILocalPortletAssignable"
-		 class="plone.app.portlets.browser.manage.ManageContextualPortlets"
-		 template="templates/managefooterportlets.pt"
-		 permission="plone.app.portlets.ManagePortlets"
-	/>
-	
-<!-- RESOURCE DIRECTORIES -->	
+    <browser:page
+         name="manage-footerportlets"
+         for="plone.portlets.interfaces.ILocalPortletAssignable"
+         class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+         template="templates/managefooterportlets.pt"
+         permission="plone.app.portlets.ManagePortlets"
+    />
+    
+<!-- RESOURCE DIRECTORIES -->   
 <!-- Register the resource directory for stylesheets -->
     <browser:resourceDirectory
         name="ContentWellPortlets.styles"
@@ -78,8 +78,8 @@
 <!-- ADAPTERS -->
 <!-- make an adapter for our very own renderer -->
 <adapter
-	factory="Products.ContentWellPortlets.browser.manager.ContentWellPortletRenderer"
-	provides="plone.portlets.interfaces.IPortletManagerRenderer"
-	/>
+    factory="Products.ContentWellPortlets.browser.manager.ContentWellPortletRenderer"
+    provides="plone.portlets.interfaces.IPortletManagerRenderer"
+    />
 
 </configure>

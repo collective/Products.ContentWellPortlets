@@ -10,21 +10,21 @@ class IContentWellPortlets(Interface):
 class IContentWellPortletManager(IPortletManager, IColumn):
     """
     Superclass used by our adapter
-	The IColumn bit means that we can add all the portlets available to 
-	 the right-hand and left-hand column portlet managers
+    The IColumn bit means that we can add all the portlets available to 
+     the right-hand and left-hand column portlet managers
     """
     
 class IPortletsAboveContent(IContentWellPortletManager):
-	 """
-	 For the portlet manager above the content area.
-	 """
+     """
+     For the portlet manager above the content area.
+     """
 
 class IPortletsBelowContent(IContentWellPortletManager):
-	 """
-	 For the portlet manager below the content area.
-	 """
+     """
+     For the portlet manager below the content area.
+     """
 
 class IFooterPortlets(IContentWellPortletManager):
-	 """
-	 For the portlet manager in the footer area.
-	 """
+     """
+     For the portlet manager in the footer area.
+     """
