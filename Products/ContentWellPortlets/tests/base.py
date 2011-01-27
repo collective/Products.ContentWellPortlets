@@ -8,10 +8,10 @@ from Products.PloneTestCase.layer import onsetup
 
 @onsetup
 def setup_ContentWellPortlets():
-    '''
+    """
     The @onsetup decorator means this will not execute until the 
     Plone site testing layer has been set up
-    '''
+    """
     
     # Load the ZCML configuration
     fiveconfigure.debug_mode = True
@@ -33,4 +33,4 @@ setup_ContentWellPortlets()
 ptc.setupPloneSite(products=['Products.ContentWellPortlets'])
     
 class ContentWellPortletsTestCase(ptc.PloneTestCase):
-    '''Use this base class for all the tests in the package. Put common setup code in here'''
+    """Use this base class for all the tests in the package. Put common setup code in here"""

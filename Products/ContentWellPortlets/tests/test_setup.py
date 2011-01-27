@@ -5,31 +5,31 @@ import unittest
 from Products.ContentWellPortlets.tests.base import ContentWellPortletsTestCase
 
 class TestSetup(ContentWellPortletsTestCase):
-    '''
+    """
     Check whether product is installed correctly
-    '''
+    """
     
     def afterSetUp(self):
         pass
 
     def testCSSregistered(self):
-        '''
+        """
         Is our stylesheet registered?
-        '''
+        """
         self.failUnless('++resource++ContentWellPortlets.styles/ContentWellPortlets.css' in self.portal.portal_css.getResourceIds(), 'Cannot find CSS')
         
     def testInterfaceAvailable(self):
-        '''
+        """
         Is our product-specific interface available?
-        '''
+        """
         from plone.browserlayer import utils
         from Products.ContentWellPortlets.browser.interfaces import IContentWellPortlets
         self.failUnless(IContentWellPortlets in utils.registered_layers(), 'Cannot find IContentWellPortlets interface')
     
     def testPortletManagers(self):
-        '''
+        """
         Are our portlet managers available? Test by inserting a calendar portlet
-        '''
+        """
         from zope.component import getUtility, getMultiAdapter
         from plone.app.portlets.portlets import calendar
         from plone.portlets.interfaces import IPortletManager
