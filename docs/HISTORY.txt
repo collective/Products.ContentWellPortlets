@@ -1,9 +1,13 @@
 Changelog
 =========
 
-3.0 (Unreleased)
+3.0b1 (Unreleased)
 ----------------
 
+* Pin to Plone 4.0 or better. Those looking for 3.x compatibility are best
+  sticking with ContentWellPortlets 2.0.
+  [esteele]
+  
 * Added French translation
   [kiorky,numahell]
 
