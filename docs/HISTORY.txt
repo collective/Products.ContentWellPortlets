@@ -42,7 +42,7 @@ Changelog
 * Got rid of CSS associated with the previous (fudge) method of rendering we were using
 
 1.0.1 (2008-12-17)
-----------------
+------------------
 
 * Fixed an issue with an incomplete egg
 
