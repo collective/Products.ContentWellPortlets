@@ -3,7 +3,7 @@
 
 <object>
     <order manager="plone.portalfooter" skinname="*">
-        <viewlet name="contentwellportlets.footerportlets" insert-before = "plone.footer"/> 
+        <viewlet name="contentwellportlets.footerportlets" insert-before="plone.footer"/> 
         <viewlet name="plone.footer" />
         <viewlet name="plone.colophon"/>
  </order>
