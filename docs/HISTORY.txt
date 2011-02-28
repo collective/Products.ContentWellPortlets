@@ -1,7 +1,18 @@
 Changelog
 =========
 
-3.0b1 (Unreleased)
+3.0b2 (2011-02-28)
+------------------
+
+* Change the way the footer portlets viewlet is registered so that it plays a
+  bit more nicely with themes.
+  [esteele]
+
+* Add a class="row" to the footer portlet template to prevent it from bleeding
+  into the content area.
+  [esteele]
+  
+3.0b1 (2011-01-27)
 ------------------
 
 * Pin to Plone 4.0 or better. Those looking for 3.x compatibility are best
@@ -30,7 +41,8 @@ Changelog
 ----------------
 
 * Adds Footer portlets
-* Adds extra portlet managers to each content well portlet area (6 per area: above content, below content, and footer) - 18 total
+* Adds extra portlet managers to each content well portlet area (6 per area:
+  above content, below content, and footer) - 18 total
 * Included extra example css in README.txt
 * Cleaned up manager UI
 * Adds warning message when on a default view of a container.
@@ -39,7 +51,8 @@ Changelog
 ----------------
 
 * Added our own portlet manager renderer (closes ticket #952)
-* Got rid of CSS associated with the previous (fudge) method of rendering we were using
+* Got rid of CSS associated with the previous (fudge) method of rendering we
+  were using
 
 1.0.1 (2008-12-17)
 ------------------
