@@ -4,6 +4,10 @@ Changelog
 3.0.1 (Unreleased)
 ------------------
 
+* Depend on 'Products.CMFPlone' instead of 'Plone'. See
+  http://dev.plone.org/plone/ticket/10877 for more information.
+  [esteele]
+  
 3.0 (2011-03-09)
 ----------------
 
