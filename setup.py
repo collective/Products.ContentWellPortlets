@@ -25,7 +25,7 @@ setup(name='Products.ContentWellPortlets',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'Plone>=4.0'
+          'Products.CMFPlone>=4.0'
           # -*- Extra requirements: -*-
       ],
       entry_points="""
