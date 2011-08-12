@@ -39,21 +39,15 @@ class ContentWellPortletsViewlet(ViewletBase):
         return managers
 
 class PortletsAboveViewlet(ContentWellPortletsViewlet):
-    render = ViewPageTemplateFile('templates/portletsabovecontent.pt')
-
     name = 'AbovePortletManager'
     manage_view = '@@manage-portletsabovecontent'
             
 
 class PortletsBelowViewlet(ContentWellPortletsViewlet):
-    render = ViewPageTemplateFile('templates/portletsbelowcontent.pt')
-        
     name = 'BelowPortletManager'
     manage_view = '@@manage-portletsbelowcontent'
 
 
 class FooterPortletsViewlet(ContentWellPortletsViewlet):
-    render = ViewPageTemplateFile('templates/footerportlets.pt')
-        
     name = 'FooterPortletManager'
     manage_view = '@@manage-portletsfooter'
