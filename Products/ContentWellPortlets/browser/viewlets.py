@@ -34,7 +34,7 @@ class ContentWellPortletsViewlet(ViewletBase):
         numManagers = len(visibleManagers)
         for counter, name in enumerate(visibleManagers):
             pos = 'position-%s' % str(Fraction(counter, numManagers)).replace('/',':')
-            width = 'width-%s' % (str(Fraction(1, numManagers)).replace('/',':') if numManagers else 'full')
+            width = 'width-%s' % (str(Fraction(1, numManagers)).replace('/',':') if numManagers >1 else 'full')
             managers.append((name, 'cell %s %s %s' % (name.split('.')[-1], width, pos)))
         return managers
 
