@@ -1,9 +1,23 @@
 Changelog
 =========
 
-3.0.1 (Unreleased)
+4.0 (Unreleased)
 ------------------
 
+* Portlet managers' css identifiers are now of the format
+  'AbovePortletManager1' instead of the previously used
+  'portletsAboveContentA'
+  [esteele]
+  
+* Use Plone 4's deco.gs to handle layout automatically. Portlet managers will
+  now display as 1/[number of portlet managers with visible portlets] wide.
+  For example, if three of the six portlet managers have visible portlets,
+  each will fill 1/3 of the available area. Themes based on
+  plonetheme.sunburst will see the changes. Others will either need to use
+  sunburst's columns.css or manually align content using each portlet
+  manager's unique id.
+  [esteele]
+  
 * Depend on 'Products.CMFPlone' instead of 'Plone'. See
   http://dev.plone.org/plone/ticket/10877 for more information.
   [esteele]
