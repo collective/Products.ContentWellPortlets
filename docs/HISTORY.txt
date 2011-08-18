@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.0 (Unreleased)
-------------------
+4.0 (2011-08-18)
+----------------
 
 * Portlet managers' css identifiers are now of the format
   'AbovePortletManager1' instead of the previously used
