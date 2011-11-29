@@ -38,6 +38,10 @@ class ContentWellPortletsViewlet(ViewletBase):
             managers.append((name, 'cell %s %s %s' % (name.split('.')[-1], width, pos)))
         return managers
 
+class PortletsInHeaderViewlet(ContentWellPortletsViewlet):
+    name = 'InHeaderPortletManager'
+    manage_view = '@@manage-inheaderportlets'
+            
 class PortletsAboveViewlet(ContentWellPortletsViewlet):
     name = 'AbovePortletManager'
     manage_view = '@@manage-portletsabovecontent'

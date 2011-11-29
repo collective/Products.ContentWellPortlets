@@ -2,6 +2,35 @@
 <!-- Set up all the new portlet managers we need above and below the content well -->
 <portlets>
     <portletmanager 
+         name="ContentWellPortlets.InHeaderPortletManager1"
+         type="Products.ContentWellPortlets.browser.interfaces.IHeaderPortlets"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.InHeaderPortletManager2"
+         type="Products.ContentWellPortlets.browser.interfaces.IHeaderPortlets"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.InHeaderPortletManager3"
+         type="Products.ContentWellPortlets.browser.interfaces.IHeaderPortlets"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.InHeaderPortletManager4"
+         type="Products.ContentWellPortlets.browser.interfaces.IHeaderPortlets"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.InHeaderPortletManager5"
+         type="Products.ContentWellPortlets.browser.interfaces.IHeaderPortlets"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.InHeaderPortletManager6"
+         type="Products.ContentWellPortlets.browser.interfaces.IHeaderPortlets"
+    />
+    <portletmanager 
          name="ContentWellPortlets.AbovePortletManager1"
          type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
     />
