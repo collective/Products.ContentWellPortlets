@@ -19,7 +19,7 @@
     /> 
  <!-- add a management view for the portlet manager -->
     <browser:page
-         name="manage-inheaderportlets"
+         name="manage-portletsinheader"
          for="plone.portlets.interfaces.ILocalPortletAssignable"
          class="plone.app.portlets.browser.manage.ManageContextualPortlets"
          template="templates/manageinheaderportlets.pt"

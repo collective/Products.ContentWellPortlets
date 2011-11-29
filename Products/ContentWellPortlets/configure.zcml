@@ -7,10 +7,11 @@
     i18n_domain="Products.ContentWellPortlets">
 
     <include package=".browser" />
+    <include file="upgrades.zcml" />
 
     <i18n:registerTranslations directory="locales" />
 
-<!-- register the Generic Setup extension profile -->
+    <!-- register the Generic Setup extension profile -->
     <genericsetup:registerProfile
           name="default"
           title="ContentWellPortlets"

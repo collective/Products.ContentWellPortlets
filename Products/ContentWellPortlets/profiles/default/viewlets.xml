@@ -2,9 +2,9 @@
 
 <object>
      <order manager="plone.portalheader" skinname="*">
-        <viewlet name="contentwellportlets.inheaderportlets" insert-after="plone.global_sections"/> 
+        <viewlet name="contentwellportlets.inheaderportlets" insert-after="*"/> 
      </order>    
-    <order manager="plone.portalfooter" skinname="*">
+     <order manager="plone.portalfooter" skinname="*">
         <viewlet name="contentwellportlets.footerportlets" insert-before="plone.footer"/> 
      </order>
 </object>

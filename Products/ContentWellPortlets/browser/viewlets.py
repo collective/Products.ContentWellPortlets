@@ -1,4 +1,4 @@
-from zope.component import getMultiAdapter
+from zope.component import getMultiAdapter, ComponentLookupError
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from Products.CMFCore.utils import getToolByName
@@ -21,12 +21,21 @@ class ContentWellPortletsViewlet(ViewletBase):
 
     def showPortlets(self):
         return '@@manage-portlets' not in self.request.get('URL')
-        
+
+    def portletManagers(self):
+        managers = []
+        try:
+            for n in range(1,7):
+                name = 'ContentWellPortlets.%s%s' % (self.name, n)
+                mgr = getUtility(IPortletManager, name=name, context=self.context)
+                managers.append((mgr,name))
+            return managers
+        except ComponentLookupError:
+            return []
+
     def portletManagersToShow(self):
         visibleManagers = []
-        for n in range(1,7):
-            name = 'ContentWellPortlets.%s%s' % (self.name, n)
-            mgr = getUtility(IPortletManager, name=name, context=self.context)
+        for mgr, name in self.portletManagers():
             if mgr(self.context, self.request, self).visible:
                 visibleManagers.append(name)
         
@@ -38,10 +47,12 @@ class ContentWellPortletsViewlet(ViewletBase):
             managers.append((name, 'cell %s %s %s' % (name.split('.')[-1], width, pos)))
         return managers
 
+
 class PortletsInHeaderViewlet(ContentWellPortletsViewlet):
     name = 'InHeaderPortletManager'
-    manage_view = '@@manage-inheaderportlets'
+    manage_view = '@@manage-portletsinheader'
             
+
 class PortletsAboveViewlet(ContentWellPortletsViewlet):
     name = 'AbovePortletManager'
     manage_view = '@@manage-portletsabovecontent'
