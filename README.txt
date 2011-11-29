@@ -4,8 +4,10 @@ Overview
 * This product enables you to put portlets in places other than right and left
   columns, specifically:
   
+  * Underneath global nav but above portal-columns so it spans the width of the page
   * above the main heading (h1) of the page
   * at the base of the page, above the footer
+  * in the footer well
   
   In each area, you can add up to three columns of portlets. 
 
