@@ -1,5 +1,5 @@
 Overview
-============
+========
 
 * This product enables you to put portlets in places other than right and left
   columns, specifically:
@@ -56,7 +56,7 @@ to the URL:
 
 
 Technical details
-===================
+=================
 
 * The product adds two new viewlets; within each of these are three portlet
   managers (specified in portlets.xml) For details of exactly which viewlet

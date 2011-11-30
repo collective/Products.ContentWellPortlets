@@ -1,11 +1,15 @@
 Changelog
 =========
-4.1.0 (2011-11-29)
+
+4.1.0 (2011-11-30)
 ------------------
 
 - Added another portlet manager below the global nav but above portal-columns
   [robzonenet]
 
+- Added upgrade step and improved renderer to fail gracefully when the upgrade
+  has not yet been run.
+  [cah190]
 
 
 4.0.1 (2011-11-22)
