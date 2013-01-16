@@ -4,6 +4,9 @@ Changelog
 4.1.1 (unreleased)
 ------------------
 
+- Replace migration code with ZCML upgrade step.
+  [cah190]
+
 - Merged Italian translation from Maurizio Lupo.  Thanks!
   [cah190]
 
