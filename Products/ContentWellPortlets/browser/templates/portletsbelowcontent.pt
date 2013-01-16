@@ -12,6 +12,7 @@
 </div>
 
 <div class="managePortletsBelowLink"
+   i18n:domain="Products.ContentWellPortlets"
    tal:condition="view/canManagePortlets">
     <a href="" 
        class="managePortletsFallback"

@@ -12,6 +12,7 @@
     </div>
 
     <div class="manageInHeaderPortletsLink"
+        i18n:domain="Products.ContentWellPortlets"
         tal:condition="python:view.canManagePortlets">
         <a href="" 
            class="managePortletsFallback"
