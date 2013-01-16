@@ -118,4 +118,35 @@
          name="ContentWellPortlets.FooterPortletManager6"
          type="Products.ContentWellPortlets.browser.interfaces.IFooterPortlets"
     />
+
+    <portletmanager 
+         name="ContentWellPortlets.BelowTitlePortletManager1"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContentTitle"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.BelowTitlePortletManager2"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContentTitle"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.BelowTitlePortletManager3"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContentTitle"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.BelowTitlePortletManager4"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContentTitle"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.BelowTitlePortletManager5"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContentTitle"
+    />
+
+    <portletmanager 
+         name="ContentWellPortlets.BelowTitlePortletManager6"
+         type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContentTitle"
+    />
+
 </portlets>

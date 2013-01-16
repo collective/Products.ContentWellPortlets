@@ -1,8 +1,12 @@
 Changelog
 =========
 
-4.1.1 (unreleased)
+4.2.0 (unreleased)
 ------------------
+
+- Adding PortletsBelowContentTitle based on Maurizio Lupo's code along with
+  upgrade step.
+  [cah190]
 
 - Replace migration code with ZCML upgrade step.
   [cah190]

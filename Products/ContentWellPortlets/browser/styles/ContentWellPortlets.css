@@ -1,7 +1,8 @@
 .managePortletsAboveLink, 
 .managePortletsBelowLink,
 .manageFooterPortletsLink,
-.manageInHeaderPortletsLink { text-align: center; margin: 0 auto 1em; clear:both;}
+.manageInHeaderPortletsLink,
+.managePortletsBelowTitleLink { text-align: center; margin: 0 auto 1em; clear:both;}
 
 .portlet-manager-row .porlet-well_manager { width: 30%; float:left; margin:1%; }
 .portlet-manager-row { width:100%; float:left; }
