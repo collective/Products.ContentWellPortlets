@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.2.0 (unreleased)
+4.2.0 (2013-01-18)
 ------------------
 
 - Adding PortletsBelowContentTitle based on Maurizio Lupo's code along with
