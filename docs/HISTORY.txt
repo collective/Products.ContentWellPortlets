@@ -1,6 +1,13 @@
 Changelog
 =========
 
+4.2.1 (unreleased)
+------------------
+
+- Add uninstall profile.
+  [thet]
+
+
 4.2.0 (2013-01-18)
 ------------------
 

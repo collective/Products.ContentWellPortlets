@@ -21,5 +21,12 @@
           i18n:attributes="title gs_profiles_default_title;
                            description gs_profiles_default_description;"
           />
+    <genericsetup:registerProfile
+          name="uninstall"
+          title="ContentWellPortlets uninstall"
+          directory="profiles/uninstall"
+          description="Uninstall profile for Products.ContentWellPortlets"
+          provides="Products.GenericSetup.interfaces.EXTENSION"
+          />
 
 </configure>
