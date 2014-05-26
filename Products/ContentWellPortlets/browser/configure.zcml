@@ -28,9 +28,9 @@
       name="contentwellportlets.inheaderportlets"
       class=".viewlets.PortletsInHeaderViewlet"
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-      layer=".interfaces.IContentWellPortlets"
-      permission="zope2.View"
       template="templates/inheaderportlets.pt"
+      permission="zope2.View"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-portletsinheader"
@@ -38,6 +38,7 @@
       class="plone.app.portlets.browser.manage.ManageContextualPortlets"
       template="templates/manageinheaderportlets.pt"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-typeportletsinheader"
@@ -45,6 +46,7 @@
       class="plone.app.portlets.browser.manage.ManageContentTypePortlets"
       template="templates/manageinheaderportlets.pt"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
 
   <!-- BELOW TITLE -->
@@ -52,25 +54,25 @@
       name="contentwellportlets.belowtitleportlets"
       class=".viewlets.PortletsBelowTitleViewlet"
       manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
-      layer=".interfaces.IContentWellPortlets"
-      permission="zope2.View"
       template="templates/portletsbelowtitle.pt"
+      permission="zope2.View"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-portletsbelowtitlecontent"
       for="plone.portlets.interfaces.ILocalPortletAssignable"
       class="plone.app.portlets.browser.manage.ManageContextualPortlets"
       template="templates/manageportletsbelowtitle.pt"
-      layer=".interfaces.IContentWellPortlets"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-typeportletsbelowtitlecontent"
       for="Products.CMFCore.interfaces.ISiteRoot"
       class="plone.app.portlets.browser.manage.ManageContentTypePortlets"
       template="templates/manageportletsbelowtitle.pt"
-      layer=".interfaces.IContentWellPortlets"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
 
   <!-- ABOVE CONTENT -->
@@ -78,9 +80,9 @@
       name="contentwellportlets.portletsabovecontent"
       class=".viewlets.PortletsAboveViewlet"
       manager="plone.app.layout.viewlets.interfaces.IAboveContent"
-      layer=".interfaces.IContentWellPortlets"
-      permission="zope2.View"
       template="templates/portletsabovecontent.pt"
+      permission="zope2.View"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-portletsabovecontent"
@@ -88,6 +90,7 @@
       class="plone.app.portlets.browser.manage.ManageContextualPortlets"
       template="templates/manageportletsabove.pt"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-typeportletsabovecontent"
@@ -95,6 +98,7 @@
       class="plone.app.portlets.browser.manage.ManageContentTypePortlets"
       template="templates/manageportletsabove.pt"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
 
   <!-- BELOW CONTENT -->
@@ -102,9 +106,9 @@
       name="contentwellportlets.portletsbelowcontent"
       class=".viewlets.PortletsBelowViewlet"
       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-      layer=".interfaces.IContentWellPortlets"
-      permission="zope2.View"
       template="templates/portletsbelowcontent.pt"
+      permission="zope2.View"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-portletsbelowcontent"
@@ -112,6 +116,7 @@
       class="plone.app.portlets.browser.manage.ManageContextualPortlets"
       template="templates/manageportletsbelow.pt"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-typeportletsbelowcontent"
@@ -119,6 +124,7 @@
       class="plone.app.portlets.browser.manage.ManageContentTypePortlets"
       template="templates/manageportletsbelow.pt"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
 
   <!-- FOOTER -->
@@ -126,9 +132,9 @@
       name="contentwellportlets.footerportlets"
       class=".viewlets.FooterPortletsViewlet"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-      layer=".interfaces.IContentWellPortlets"
-      permission="zope2.View"
       template="templates/footerportlets.pt"
+      permission="zope2.View"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-portletsfooter"
@@ -136,6 +142,7 @@
       class="plone.app.portlets.browser.manage.ManageContextualPortlets"
       template="templates/managefooterportlets.pt"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
   <browser:page
       name="manage-typeportletsfooter"
@@ -143,6 +150,7 @@
       class="plone.app.portlets.browser.manage.ManageContentTypePortlets"
       template="templates/managefooterportlets.pt"
       permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
       />
 
 
@@ -156,6 +164,5 @@
       permission="plone.app.portlets.ManagePortlets"
       layer=".interfaces.IContentWellPortlets"
       />
-
 
 </configure>
