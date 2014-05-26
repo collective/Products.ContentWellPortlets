@@ -1,16 +1,21 @@
-from zope.component import getMultiAdapter, ComponentLookupError
-from plone.app.layout.viewlets.common import ViewletBase
 from Products.CMFCore.utils import getToolByName
-from zope.component import getUtility
-from plone.portlets.interfaces import IPortletManager
 from fractions import Fraction
+from plone.app.controlpanel.interfaces import IPloneControlPanelView
+from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.portlets.browser.interfaces import\
     IManageContentTypePortletsView
+from plone.portlets.interfaces import IPortletManager
+from zope.component import getMultiAdapter, ComponentLookupError
+from zope.component import getUtility
 
 
 class ContentWellPortletsViewlet(ViewletBase):
     name = ""
     manage_view = ""
+
+    @property
+    def dont_show(self):
+        return IPloneControlPanelView.providedBy(self.view)
 
     def update(self):
         context_state = getMultiAdapter(
@@ -29,12 +34,12 @@ class ContentWellPortletsViewlet(ViewletBase):
         # This is the way it's done in plone.app.portlets.manager, so we'll do
         # the same
         mt = getToolByName(self.context, 'portal_membership')
-        self.canManagePortlets = mt.checkPermission(
-            'Portlets: Manage portlets',
-            self.context)
+        self.canManagePortlets = not self.dont_show and mt.checkPermission(
+            'Portlets: Manage portlets', self.context)
 
     def showPortlets(self):
-        return '@@manage-portlets' not in self.request.get('URL')
+        return not self.dont_show\
+            and '@@manage-portlets' not in self.request.get('URL')
 
     def portletManagers(self):
         managers = []
