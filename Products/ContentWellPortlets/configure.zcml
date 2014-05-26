@@ -1,32 +1,29 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
-    xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="Products.ContentWellPortlets">
 
-    <include package=".browser" />
-    <include file="upgrades.zcml" />
+  <include package=".browser" />
+  <include file="upgrades.zcml" />
 
-    <i18n:registerTranslations directory="locales" />
+  <i18n:registerTranslations directory="locales" />
 
-    <!-- register the Generic Setup extension profile -->
-    <genericsetup:registerProfile
-          name="default"
-          title="ContentWellPortlets"
-          directory="profiles/default"
-          description="Extension profile for Products.ContentWellPortlets"
-          provides="Products.GenericSetup.interfaces.EXTENSION"
-          i18n:attributes="title gs_profiles_default_title;
-                           description gs_profiles_default_description;"
-          />
-    <genericsetup:registerProfile
-          name="uninstall"
-          title="ContentWellPortlets uninstall"
-          directory="profiles/uninstall"
-          description="Uninstall profile for Products.ContentWellPortlets"
-          provides="Products.GenericSetup.interfaces.EXTENSION"
-          />
+  <genericsetup:registerProfile
+      name="default"
+      title="ContentWellPortlets"
+      directory="profiles/default"
+      description="Extension profile for Products.ContentWellPortlets"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      i18n:attributes="title gs_profiles_default_title;
+                       description gs_profiles_default_description;"
+      />
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="ContentWellPortlets uninstall"
+      directory="profiles/uninstall"
+      description="Uninstall profile for Products.ContentWellPortlets"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
 
 </configure>

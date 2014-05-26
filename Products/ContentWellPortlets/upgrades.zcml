@@ -3,30 +3,30 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="plone">
 
-    <genericsetup:upgradeDepends
-        title="Upgrade from 2.1 to 3"
-        description="Register the header portlets by reimporting portlets.xml"
-        source="2.1"
-        destination="3"
-        sortkey="1"
-        profile="Products.ContentWellPortlets:default"
-        import_profile="Products.ContentWellPortlets:default"
-        import_steps="portlets"
-        run_deps="False"
-        purge="False"
-        />
+  <genericsetup:upgradeDepends
+      title="Upgrade from 2.1 to 3"
+      description="Register the header portlets by reimporting portlets.xml"
+      source="2.1"
+      destination="3"
+      sortkey="1"
+      profile="Products.ContentWellPortlets:default"
+      import_profile="Products.ContentWellPortlets:default"
+      import_steps="portlets"
+      run_deps="False"
+      purge="False"
+      />
 
-    <genericsetup:upgradeDepends
-        title="Upgrade from 3 to 4"
-        description="Register the below content title portlets by reimporting portlets.xml"
-        source="3"
-        destination="4"
-        sortkey="1"
-        profile="Products.ContentWellPortlets:default"
-        import_profile="Products.ContentWellPortlets:default"
-        import_steps="portlets"
-        run_deps="False"
-        purge="False"
-        />
+  <genericsetup:upgradeDepends
+      title="Upgrade from 3 to 4"
+      description="Register the below content title portlets by reimporting portlets.xml"
+      source="3"
+      destination="4"
+      sortkey="1"
+      profile="Products.ContentWellPortlets:default"
+      import_profile="Products.ContentWellPortlets:default"
+      import_steps="portlets"
+      run_deps="False"
+      purge="False"
+      />
     
 </configure>
