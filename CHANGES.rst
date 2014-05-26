@@ -4,6 +4,9 @@ Changelog
 4.3.0 (unreleased)
 ------------------
 
+- Add contentwellportlets class to all portlet rows.
+  [thet]
+
 - Rename all porlet-well_manager classes to portlet-well_manager.
   [thet]
 

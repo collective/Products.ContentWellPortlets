@@ -1,5 +1,5 @@
 <div id="portlets-above"
-     class="row"
+     class="contentwellportlets row"
      i18n:domain="Products.ContentWellPortlets">
     <tal:block tal:condition="view/showPortlets">
         <tal:portletmanagers tal:repeat="manager view/portletManagersToShow">

@@ -1,6 +1,6 @@
 <tal:block condition="view/portletManagers">
     <div id="portlets-in-header"
-         class="row"
+         class="contentwellportlets row"
          i18n:domain="Products.ContentWellPortlets">
          <tal:block tal:condition="view/showPortlets">
              <tal:portletmanagers tal:repeat="manager view/portletManagersToShow">
