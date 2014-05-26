@@ -29,6 +29,11 @@ setup(
         'setuptools',
         'Products.CMFPlone>=4.0b1'
     ],
+    extras_require=dict(
+        test=[
+            'Products.PloneTestCase',
+        ]
+    ),
     entry_points="""
     # -*- Entry points: -*-
     """,
