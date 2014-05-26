@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-import os
 
 version = '4.3.0.dev0'
 
@@ -9,8 +8,8 @@ setup(
     version=version,
     description="A Plone product that enables you to add portlets to the "
                 "central column in a page",
-    long_description=open("README.txt").read() + "\n" +
-                open(os.path.join("docs", "HISTORY.txt")).read(),
+    long_description="%s\n%s" % (
+        open("README.rst").read(), open("CHANGES.rst").read()),
     classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
