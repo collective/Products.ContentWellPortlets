@@ -100,5 +100,5 @@ class PortletsBelowViewlet(ContentWellPortletsViewlet):
 
 class FooterPortletsViewlet(ContentWellPortletsViewlet):
     name = 'FooterPortletManager'
-    manage_view = '@@manage-portletsinheader'
+    manage_view = '@@manage-portletsfooter'
     manage_type_view = '@@manage-typeportletsfooter'
