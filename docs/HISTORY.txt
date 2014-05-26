@@ -1,12 +1,10 @@
 Changelog
 =========
 
-4.2.1 (unreleased)
+4.3.0 (unreleased)
 ------------------
 
-- Don't show ContentWellPortlets on views implementing IPloneControlPanelView.
-  Please note, that not all control panels implement this interface.
-  [thet]
+- Don't show ContentWellPortlets on views implementing IPloneControlPanelView.  Please note, that not all control panels implement this interface.  [thet]
 
 - Add content type portlets management screens for each ContentWellPortlets
   area. These management screens are accessible from the
