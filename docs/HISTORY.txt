@@ -4,6 +4,12 @@ Changelog
 4.2.1 (unreleased)
 ------------------
 
+- Add content type portlets management screens for each ContentWellPortlets
+  area. These management screens are accessible from the
+  @@manage-content-type-portlets view, which must be called with the content
+  type as ``key`` request parameter. Open it from the @@types-controlpanel.
+  [thet]
+
 - Add uninstall profile.
   [thet]
 
@@ -47,7 +53,7 @@ Changelog
   'AbovePortletManager1' instead of the previously used
   'portletsAboveContentA'
   [esteele]
-  
+
 * Use Plone 4's deco.gs to handle layout automatically. Portlet managers will
   now display as 1/[number of portlet managers with visible portlets] wide.
   For example, if three of the six portlet managers have visible portlets,
@@ -56,17 +62,17 @@ Changelog
   sunburst's columns.css or manually align content using each portlet
   manager's unique id.
   [esteele]
-  
+
 * Depend on 'Products.CMFPlone' instead of 'Plone'. See
   http://dev.plone.org/plone/ticket/10877 for more information.
   [esteele]
-  
+
 3.0 (2011-03-09)
 ----------------
 
 * Release 3.0 Final
   [esteele]
-  
+
 3.0b2 (2011-02-28)
 ------------------
 
@@ -77,14 +83,14 @@ Changelog
 * Add a class="row" to the footer portlet template to prevent it from bleeding
   into the content area.
   [esteele]
-  
+
 3.0b1 (2011-01-27)
 ------------------
 
 * Pin to Plone 4.0 or better. Those looking for 3.x compatibility are best
   sticking with ContentWellPortlets 2.0.
   [esteele]
-  
+
 * Added French translation
   [kiorky,numahell]
 
@@ -99,7 +105,7 @@ Changelog
 
 * Move "above" portlets to IAboveContent viewlet manager.
   [esteele]
-  
+
 * Tweak styling of "manage portlets" links, add managePortletsFallback class.
   [esteele]
 

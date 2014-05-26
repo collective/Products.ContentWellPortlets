@@ -4,6 +4,8 @@ from Products.CMFCore.utils import getToolByName
 from zope.component import getUtility
 from plone.portlets.interfaces import IPortletManager
 from fractions import Fraction
+from plone.app.portlets.browser.interfaces import\
+    IManageContentTypePortletsView
 
 
 class ContentWellPortletsViewlet(ViewletBase):
@@ -15,7 +17,14 @@ class ContentWellPortletsViewlet(ViewletBase):
             (self.context,
              self.request),
             name=u'plone_context_state')
-        self.manageUrl = '%s/%s' % (context_state.view_url(), self.manage_view)
+
+        if IManageContentTypePortletsView.providedBy(self.view):
+            key = self.request.form.get('key')
+            self.manageUrl = '%s/%s?key=%s' % (
+                context_state.view_url(), self.manage_type_view, key)
+        else:
+            self.manageUrl = '%s/%s' % (
+                context_state.view_url(), self.manage_view)
 
         # This is the way it's done in plone.app.portlets.manager, so we'll do
         # the same
@@ -63,23 +72,28 @@ class ContentWellPortletsViewlet(ViewletBase):
 class PortletsInHeaderViewlet(ContentWellPortletsViewlet):
     name = 'InHeaderPortletManager'
     manage_view = '@@manage-portletsinheader'
-
-
-class PortletsAboveViewlet(ContentWellPortletsViewlet):
-    name = 'AbovePortletManager'
-    manage_view = '@@manage-portletsabovecontent'
-
-
-class PortletsBelowViewlet(ContentWellPortletsViewlet):
-    name = 'BelowPortletManager'
-    manage_view = '@@manage-portletsbelowcontent'
-
-
-class FooterPortletsViewlet(ContentWellPortletsViewlet):
-    name = 'FooterPortletManager'
-    manage_view = '@@manage-portletsfooter'
+    manage_type_view = '@@manage-typeportletsinheader'
 
 
 class PortletsBelowTitleViewlet(ContentWellPortletsViewlet):
     name = 'BelowTitlePortletManager'
     manage_view = '@@manage-portletsbelowtitlecontent'
+    manage_type_view = '@@manage-typeportletsbelowtitlecontent'
+
+
+class PortletsAboveViewlet(ContentWellPortletsViewlet):
+    name = 'AbovePortletManager'
+    manage_view = '@@manage-portletsabovecontent'
+    manage_type_view = '@@manage-typeportletsabovecontent'
+
+
+class PortletsBelowViewlet(ContentWellPortletsViewlet):
+    name = 'BelowPortletManager'
+    manage_view = '@@manage-portletsbelowcontent'
+    manage_type_view = '@@manage-typeportletsbelowcontent'
+
+
+class FooterPortletsViewlet(ContentWellPortletsViewlet):
+    name = 'FooterPortletManager'
+    manage_view = '@@manage-portletsinheader'
+    manage_type_view = '@@manage-typeportletsfooter'
