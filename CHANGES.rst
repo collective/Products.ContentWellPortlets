@@ -4,6 +4,9 @@ Changelog
 4.3.0 (unreleased)
 ------------------
 
+- Rename all porlet-well_manager classes to portlet-well_manager.
+  [thet]
+
 - Don't show ContentWellPortlets on views implementing IPloneControlPanelView.
   Please note, that not all control panels implement this interface.
   [thet]

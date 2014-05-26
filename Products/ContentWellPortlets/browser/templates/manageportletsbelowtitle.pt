@@ -48,33 +48,33 @@
             </p>    
             
             <div class="portlet-manager-row">
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager">
                     <h2 i18n:translate="portlet-well-a">Portlet well A</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager1" />
                 </div>
     
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager">
                     <h2 i18n:translate="portlet-well-b">Portlet well B</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager2" />
                 </div>
     
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager">
                     <h2 i18n:translate="portlet-well-c">Portlet well C</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager3" />
                 </div>
             </div>
             <div class="portlet-manager-row">
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager">
                     <h2 i18n:translate="portlet-well-d">Portlet well D</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager4" />
                 </div>
     
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager">
                     <h2 i18n:translate="portlet-well-e">Portlet well E</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager5" />
                 </div>
 
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager">
                     <h2 i18n:translate="portlet-well-f">Portlet well F</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager6" />
                 </div>
