@@ -154,13 +154,21 @@
       />
 
 
-  <!-- custom manage content type template to include the IBelowContentTitle
-       viewlet -->
+  <!-- custom manage content type and contextual templates to include all
+       ContentWellPortlets viewlet slots -->
   <browser:page
       for="Products.CMFCore.interfaces.ISiteRoot"
       class="plone.app.portlets.browser.manage.ManageContentTypePortlets"
       name="manage-content-type-portlets"
       template="templates/manage-content-type.pt"
+      permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
+      />
+  <browser:page
+      for="plone.portlets.interfaces.ILocalPortletAssignable"
+      class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+      name="manage-portlets"
+      template="templates/manage-contextual.pt"
       permission="plone.app.portlets.ManagePortlets"
       layer=".interfaces.IContentWellPortlets"
       />
