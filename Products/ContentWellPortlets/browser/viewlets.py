@@ -4,6 +4,7 @@ from plone.app.controlpanel.interfaces import IPloneControlPanelView
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.portlets.browser.interfaces import\
     IManageContentTypePortletsView
+from plone.app.portlets.browser.interfaces import IManagePortletsView
 from plone.portlets.interfaces import IPortletManager
 from zope.component import getMultiAdapter, ComponentLookupError
 from zope.component import getUtility
@@ -16,6 +17,13 @@ class ContentWellPortletsViewlet(ViewletBase):
     @property
     def dont_show(self):
         return IPloneControlPanelView.providedBy(self.view)
+
+    @property
+    def dont_show_links(self):
+        """Show links to portlet manager management views only in manage
+        portlets view.
+        """
+        return not IManagePortletsView.providedBy(self.view)
 
     def update(self):
         context_state = getMultiAdapter(
@@ -34,7 +42,7 @@ class ContentWellPortletsViewlet(ViewletBase):
         # This is the way it's done in plone.app.portlets.manager, so we'll do
         # the same
         mt = getToolByName(self.context, 'portal_membership')
-        self.canManagePortlets = not self.dont_show and mt.checkPermission(
+        self.canManagePortlets = not self.dont_show_links and mt.checkPermission(
             'Portlets: Manage portlets', self.context)
 
     def showPortlets(self):

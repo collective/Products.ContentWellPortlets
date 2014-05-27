@@ -4,6 +4,11 @@ Changelog
 4.3.0 (unreleased)
 ------------------
 
+- Show links to portlet manager management views only manage portlet view. So,
+  you have to visit @@manage-portlets or @@manage-content-type-portlets to edit
+  the ContentWellPortlets areas.
+  [thet]
+
 - Add contentwellportlets class to all portlet rows.
   [thet]
 
