@@ -1,14 +1,15 @@
 from Products.CMFCore.utils import getToolByName
+from Products.ContentWellPortlets import messageFactory as _
 from fractions import Fraction
 from plone.app.controlpanel.interfaces import IPloneControlPanelView
 from plone.app.layout.viewlets.common import ViewletBase
-from plone.app.portlets.browser.interfaces import\
-    IManageContentTypePortletsView
+from plone.app.portlets.browser import interfaces as pap_interfaces
 from plone.app.portlets.browser.interfaces import IManagePortletsView
 from plone.portlets.interfaces import IPortletManager
-from zope.component import getMultiAdapter, ComponentLookupError
+from plone.portlets.interfaces import IPortletRetriever
+from zope.component import getMultiAdapter
+from zope.component import ComponentLookupError
 from zope.component import getUtility
-from Products.ContentWellPortlets import messageFactory as _
 
 
 class ContentWellPortletsViewlet(ViewletBase):
@@ -32,7 +33,7 @@ class ContentWellPortletsViewlet(ViewletBase):
              self.request),
             name=u'plone_context_state')
 
-        if IManageContentTypePortletsView.providedBy(self.view):
+        if pap_interfaces.IManageContentTypePortletsView.providedBy(self.view):
             key = self.request.form.get('key')
             self.manageUrl = '%s/%s?key=%s' % (
                 context_state.view_url(), self.manage_type_view, key)
@@ -81,6 +82,21 @@ class ContentWellPortletsViewlet(ViewletBase):
             managers.append(
                 (name, 'cell %s %s %s' % (name.split('.')[-1], width, pos)))
         return managers
+
+    def num_portlets_for_manager(self, name):
+        """Return the number of portlets for a given portlet manager name.
+
+        :param name: Portlet manager name
+        :type name: String
+        :returns: Number of portlets for the given manager name.
+        :rtype: Integer
+        """
+        mgr = getUtility(IPortletManager,
+                         name=name,
+                         context=self.context)
+        retriever = getMultiAdapter((self.context, mgr), IPortletRetriever)
+        portlets = retriever.getPortlets()
+        return len(portlets)
 
 
 class PortletsInHeaderViewlet(ContentWellPortletsViewlet):

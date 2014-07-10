@@ -4,6 +4,10 @@ Changelog
 4.3.0 (unreleased)
 ------------------
 
+- Add a class to portlet managers, indicating how many portlets are in there.
+  The form is ``num-portlets-NUMBER``.
+  [thet]
+
 - Unify portlet manager templates to one instead of five.
   [thet]
 
