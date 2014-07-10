@@ -1,0 +1,15 @@
+<div class="contentwellportlets row" tal:attributes="id view/cssid">
+  <tal:block condition="view/showPortlets">
+  <tal:portletmanagers tal:repeat="manager view/portletManagersToShow">
+    <div tal:attributes="class python:manager[1]"
+        tal:define="mgr python:manager[0]"
+        tal:content="structure provider:${mgr}"/> 
+  </tal:portletmanagers>
+  </tal:block>
+</div>
+
+<div tal:condition="view/canManagePortlets" tal:attributes="class view/manage_portlets_link_class">
+  <a href="" class="managePortletsFallback"
+      tal:attributes="href view/manageUrl"
+      tal:content="view/manage_portlets_link_text">Add, edit or remove a portlet</a>
+</div>

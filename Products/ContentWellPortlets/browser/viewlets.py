@@ -8,6 +8,7 @@ from plone.app.portlets.browser.interfaces import IManagePortletsView
 from plone.portlets.interfaces import IPortletManager
 from zope.component import getMultiAdapter, ComponentLookupError
 from zope.component import getUtility
+from Products.ContentWellPortlets import messageFactory as _
 
 
 class ContentWellPortletsViewlet(ViewletBase):
@@ -86,27 +87,68 @@ class PortletsInHeaderViewlet(ContentWellPortletsViewlet):
     name = 'InHeaderPortletManager'
     manage_view = '@@manage-portletsinheader'
     manage_type_view = '@@manage-typeportletsinheader'
+    cssid = 'portlets-in-header'
+    manage_portlets_link_class = 'manageInHeaderPortletsLink'
+
+    @property
+    def manage_portlets_link_text(self):
+        return _(
+            'manage-in-header-portlet-link',
+            default=u'Add, edit or remove a portlet in the header area that '
+                    u'spans columns one and two plus the content area')
 
 
 class PortletsBelowTitleViewlet(ContentWellPortletsViewlet):
     name = 'BelowTitlePortletManager'
     manage_view = '@@manage-portletsbelowtitlecontent'
     manage_type_view = '@@manage-typeportletsbelowtitlecontent'
+    cssid = 'portlets-below-title'
+    manage_portlets_link_class = 'managePortletsBelowTitleLink'
+
+    @property
+    def manage_portlets_link_text(self):
+        return _(
+            'manage_portlets_below_title_link',
+            default=u'Add, edit or remove a portlet below the content title')
 
 
 class PortletsAboveViewlet(ContentWellPortletsViewlet):
     name = 'AbovePortletManager'
     manage_view = '@@manage-portletsabovecontent'
     manage_type_view = '@@manage-typeportletsabovecontent'
+    cssid = 'portlets-above'
+    manage_portlets_link_class = 'managePortletsAboveLink'
+
+    @property
+    def manage_portlets_link_text(self):
+        return _(
+            'manage_portlets_above_link',
+            default=u'Add, edit or remove a portlet above the content')
 
 
 class PortletsBelowViewlet(ContentWellPortletsViewlet):
     name = 'BelowPortletManager'
     manage_view = '@@manage-portletsbelowcontent'
     manage_type_view = '@@manage-typeportletsbelowcontent'
+    cssid = 'portlets-below'
+    manage_portlets_link_class = 'managePortletsBelowLink'
+
+    @property
+    def manage_portlets_link_text(self):
+        return _(
+            'manage_portlets_below_link',
+            default=u'Add, edit or remove a portlet below the content')
 
 
 class FooterPortletsViewlet(ContentWellPortletsViewlet):
     name = 'FooterPortletManager'
     manage_view = '@@manage-portletsfooter'
     manage_type_view = '@@manage-typeportletsfooter'
+    cssid = 'portlets-footer'
+    manage_portlets_link_class = 'manageFooterPortletsLink'
+
+    @property
+    def manage_portlets_link_text(self):
+        return _(
+            'manage-footer-portlet-link',
+            default=u'Add, edit or remove a portlet in the footer')

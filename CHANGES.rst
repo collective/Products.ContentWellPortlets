@@ -4,6 +4,9 @@ Changelog
 4.3.0 (unreleased)
 ------------------
 
+- Unify portlet manager templates to one instead of five.
+  [thet]
+
 - Show links to portlet manager management views only manage portlet view. So,
   you have to visit @@manage-portlets or @@manage-content-type-portlets to edit
   the ContentWellPortlets areas.
