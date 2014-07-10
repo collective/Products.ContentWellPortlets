@@ -25,6 +25,9 @@ Changelog
   type as ``key`` request parameter. Open it from the @@types-controlpanel.
   [thet]
 
+- Remove i18n folder. All translations are in locales folder already.
+  [thet]
+
 - Add uninstall profile.
   [thet]
 
