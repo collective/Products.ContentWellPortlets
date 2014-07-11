@@ -5,15 +5,16 @@ Changelog
 ------------------
 
 - Add a class to portlet managers, indicating how many portlets are in there.
-  The form is ``num-portlets-NUMBER``.
+  The form is ``num-portlets-NUMBER``. This can be used to build grid layouts,
+  based on available css classes.
   [thet]
 
-- Unify portlet manager templates to one instead of five.
+- Unify portlet manager templates to one template instead of five.
   [thet]
 
-- Show links to portlet manager management views only manage portlet view. So,
-  you have to visit @@manage-portlets or @@manage-content-type-portlets to edit
-  the ContentWellPortlets areas.
+- Show links to portlet manager management views only in manage portlet view.
+  So, you have to visit @@manage-portlets or @@manage-content-type-portlets to
+  edit the ContentWellPortlets areas.
   [thet]
 
 - Add contentwellportlets class to all portlet rows.
