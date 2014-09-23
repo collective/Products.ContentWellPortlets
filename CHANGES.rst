@@ -4,6 +4,25 @@ Changelog
 4.3.0 (unreleased)
 ------------------
 
+- Add a class to portlet managers, indicating how many portlets are in there.
+  The form is ``num-portlets-NUMBER``. This can be used to build grid layouts,
+  based on available css classes.
+  [thet]
+
+- Unify portlet manager templates to one template instead of five.
+  [thet]
+
+- Show links to portlet manager management views only in manage portlet view.
+  So, you have to visit @@manage-portlets or @@manage-content-type-portlets to
+  edit the ContentWellPortlets areas.
+  [thet]
+
+- Add contentwellportlets class to all portlet rows.
+  [thet]
+
+- Rename all porlet-well_manager classes to portlet-well_manager.
+  [thet]
+
 - Don't show ContentWellPortlets on views implementing IPloneControlPanelView.
   Please note, that not all control panels implement this interface.
   [thet]
@@ -12,6 +31,9 @@ Changelog
   area. These management screens are accessible from the
   @@manage-content-type-portlets view, which must be called with the content
   type as ``key`` request parameter. Open it from the @@types-controlpanel.
+  [thet]
+
+- Remove i18n folder. All translations are in locales folder already.
   [thet]
 
 - Add uninstall profile.

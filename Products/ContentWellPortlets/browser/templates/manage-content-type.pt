@@ -5,13 +5,15 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 
-<body>
-
+<head>
 <metal:javascript fill-slot="javascript_head_slot">
   <script type="text/javascript"
       tal:attributes="src string:${context/absolute_url}/++resource++manage-portlets.js">
   </script>
 </metal:javascript>
+</head>
+
+<body>
 
 <metal:custom_title fill-slot="content-title">
   <h1 class="documentFirstHeading"

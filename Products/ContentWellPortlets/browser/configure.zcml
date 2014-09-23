@@ -28,7 +28,7 @@
       name="contentwellportlets.inheaderportlets"
       class=".viewlets.PortletsInHeaderViewlet"
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-      template="templates/inheaderportlets.pt"
+      template="templates/portletmanager.pt"
       permission="zope2.View"
       layer=".interfaces.IContentWellPortlets"
       />
@@ -54,7 +54,7 @@
       name="contentwellportlets.belowtitleportlets"
       class=".viewlets.PortletsBelowTitleViewlet"
       manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
-      template="templates/portletsbelowtitle.pt"
+      template="templates/portletmanager.pt"
       permission="zope2.View"
       layer=".interfaces.IContentWellPortlets"
       />
@@ -80,7 +80,7 @@
       name="contentwellportlets.portletsabovecontent"
       class=".viewlets.PortletsAboveViewlet"
       manager="plone.app.layout.viewlets.interfaces.IAboveContent"
-      template="templates/portletsabovecontent.pt"
+      template="templates/portletmanager.pt"
       permission="zope2.View"
       layer=".interfaces.IContentWellPortlets"
       />
@@ -106,7 +106,7 @@
       name="contentwellportlets.portletsbelowcontent"
       class=".viewlets.PortletsBelowViewlet"
       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-      template="templates/portletsbelowcontent.pt"
+      template="templates/portletmanager.pt"
       permission="zope2.View"
       layer=".interfaces.IContentWellPortlets"
       />
@@ -132,7 +132,7 @@
       name="contentwellportlets.footerportlets"
       class=".viewlets.FooterPortletsViewlet"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-      template="templates/footerportlets.pt"
+      template="templates/portletmanager.pt"
       permission="zope2.View"
       layer=".interfaces.IContentWellPortlets"
       />
@@ -154,13 +154,21 @@
       />
 
 
-  <!-- custom manage content type template to include the IBelowContentTitle
-       viewlet -->
+  <!-- custom manage content type and contextual templates to include all
+       ContentWellPortlets viewlet slots -->
   <browser:page
       for="Products.CMFCore.interfaces.ISiteRoot"
       class="plone.app.portlets.browser.manage.ManageContentTypePortlets"
       name="manage-content-type-portlets"
       template="templates/manage-content-type.pt"
+      permission="plone.app.portlets.ManagePortlets"
+      layer=".interfaces.IContentWellPortlets"
+      />
+  <browser:page
+      for="plone.portlets.interfaces.ILocalPortletAssignable"
+      class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+      name="manage-portlets"
+      template="templates/manage-contextual.pt"
       permission="plone.app.portlets.ManagePortlets"
       layer=".interfaces.IContentWellPortlets"
       />

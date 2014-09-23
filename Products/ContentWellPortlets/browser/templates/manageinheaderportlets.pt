@@ -49,33 +49,33 @@
                  </a>
             </p>            
             <div class="portlet-manager-row">
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-a">In Header Portlet A</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager1" />
                 </div>
             
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-b">In Header Portlet B</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager2" />
                 </div>
             
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-c">In Header Portlet C</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager3" />
                 </div>
             </div>
             <div class="portlet-manager-row">
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-d">In Header Portlet D</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager4" />
                 </div>
             
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-e">In Header Portlet E</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager5" />
                 </div>
             
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-f">In Header Portlet F</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager6" />
                 </div>

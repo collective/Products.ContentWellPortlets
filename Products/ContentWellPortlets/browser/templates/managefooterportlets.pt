@@ -49,33 +49,33 @@
                  </a>
             </p>            
             <div class="portlet-manager-row">
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="footer-portlet-a">Footer Portlet A</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.FooterPortletManager1" />
                 </div>
             
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="footer-portlet-b">Footer Portlet B</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.FooterPortletManager2" />
                 </div>
             
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="footer-portlet-c">Footer Portlet C</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.FooterPortletManager3" />
                 </div>
             </div>
             <div class="portlet-manager-row">
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="footer-portlet-d">Footer Portlet D</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.FooterPortletManager4" />
                 </div>
             
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="footer-portlet-e">Footer Portlet E</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.FooterPortletManager5" />
                 </div>
             
-                <div class="porlet-well_manager">
+                <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="footer-portlet-f">Footer Portlet F</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.FooterPortletManager6" />
                 </div>
