@@ -4,6 +4,10 @@ Changelog
 4.3.0 (unreleased)
 ------------------
 
+- Change CSS rendering mode to "link" to allow merging with other link-rendered
+  resources.
+  [thet]
+
 - Add a class to portlet managers, indicating how many portlets are in there.
   The form is ``num-portlets-NUMBER``. This can be used to build grid layouts,
   based on available css classes.

@@ -3,7 +3,7 @@
 
  <stylesheet title="ContentWellPortlets style sheet"
     id="++resource++ContentWellPortlets.styles/ContentWellPortlets.css"
-    media="all" rel="stylesheet" rendering="import"
+    media="all" rel="stylesheet" rendering="link"
     cacheable="True" compression="safe" cookable="True"
     enabled="1" expression=""/>
 
