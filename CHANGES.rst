@@ -4,6 +4,9 @@ Changelog
 4.3.0 (unreleased)
 ------------------
 
+- Add a z3c.autoinclude.plugin entry point.
+  [thet]
+
 - Change CSS rendering mode to "link" to allow merging with other link-rendered
   resources.
   [thet]
