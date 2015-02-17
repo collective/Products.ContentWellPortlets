@@ -4,6 +4,11 @@ Changelog
 4.3.0 (unreleased)
 ------------------
 
+- Clear the title from the stylesheet registration, as this prevents this makes
+  this css resource an alternative stylesheet and prevents to be rendered in
+  browsers.
+  [thet]
+
 - Add a z3c.autoinclude.plugin entry point.
   [thet]
 
