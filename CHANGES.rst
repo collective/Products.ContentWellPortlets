@@ -1,9 +1,12 @@
 Changelog
 =========
 
-4.3.0 (unreleased)
+4.3.0 (2015-07-02)
 ------------------
 
+- Add upgrade step to update cssregistry.
+  [cah190]
+  
 - Clear the title from the stylesheet registration, as this prevents this makes
   this css resource an alternative stylesheet and prevents to be rendered in
   browsers.

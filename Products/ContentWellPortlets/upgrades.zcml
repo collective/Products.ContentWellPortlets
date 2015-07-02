@@ -29,4 +29,17 @@
       purge="False"
       />
     
+  <genericsetup:upgradeDepends
+      title="Upgrade from 4 to 5"
+      description="Remove the title attribute from the stylesheet by reimporting cssregistry.xml"
+      source="4"
+      destination="5"
+      sortkey="1"
+      profile="Products.ContentWellPortlets:default"
+      import_profile="Products.ContentWellPortlets:default"
+      import_steps="cssregistry"
+      run_deps="False"
+      purge="False"
+      />
+
 </configure>
