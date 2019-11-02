@@ -4,8 +4,8 @@ Changelog
 4.3.1 (unreleased)
 ------------------
 
-- No changes yet
-
+- Import fix for plone 5.2 
+  [gomez]
 
 4.3.0 (2015-07-02)
 ------------------
