@@ -6,6 +6,11 @@ Changelog
 
 - Import fix for plone 5.2 
   [gomez]
+  
+- Plone5 CSS resource registry fix
+  Flexbox for portlets rendering
+  [sauzher]
+
 
 4.3.0 (2015-07-02)
 ------------------
