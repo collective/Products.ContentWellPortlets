@@ -16,9 +16,13 @@
     align-items: normal;
     align-content: normal; 
     margin: auto 0;
+    --gap: 0.2em;
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+    width: calc(100% + var(--gap));
 }
+
 .contentwellportlets.row div{
     flex-grow: 1;
-    margin: 0px 0.5rem;
-    width:auto;
+    --gap: 0.2em;
+   margin: var(--gap) 0 0 var(--gap);
 }
