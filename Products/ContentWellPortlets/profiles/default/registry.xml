@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<registry>
+
+  <records prefix="plone.resources/cwportlet-style"
+      interface="Products.CMFPlone.interfaces.IResourceRegistry">
+      <value key="css">
+        <element>++plone++cwportlets.site/ContentWellPortlets.css</element>
+      </value>
+  </records>
+ <records prefix="plone.bundles/contentwellportlet-bundle"
+          interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+   <value key="resources">
+     <element>cwportlet-style</element>
+   </value>
+   <value key="enabled">True</value>
+   <value key="compile">False</value>
+   <value key="merge_with">default</value>
+   <!--<value key="depends">plone</value>-->
+   <value key="csscompilation">++plone++cwportlets.site/ContentWellPortlets.css</value>
+   <value key="last_compilation">2018-04-13 00:00:00</value>
+
+</records>
+ 
+</registry>

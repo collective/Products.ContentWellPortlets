@@ -22,3 +22,13 @@ div.width-1\3a 6 { width:    14.416%; } /* .width-1:6 */
 div.width-5\3a 6 { width:    81.083%; } /* .width-5:6 */
 div.position-1\3a 6 {margin-left:    -82.208%;} /* .position-1:6 */
 div.position-5\3a 6 {margin-left:    -15.542%;} /* .position-5:6 */
+
+.contentwellportlets.row{
+    display:flex;
+    flex-flow: row wrap;
+    
+}
+.contentwellportlets.row div{
+    flex-grow:1;
+    margin: 0px 1rem;
+}
