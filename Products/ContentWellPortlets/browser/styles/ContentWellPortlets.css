@@ -26,3 +26,9 @@
     --gap: 0.2em;
    margin: var(--gap) 0 0 var(--gap);
 }
+
+/* This prevent the pollution of CWP portlet managers in the manage-portlet toolbar menu'*/
+#edit-zone ul.plone-toolbar-main li.plonetoolbar-portlet-manager > a[id^="portlet-manager-ContentWellPortlets"] {
+    display: None !important;
+    visibility: hidden!important;
+}
