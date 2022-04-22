@@ -7,6 +7,14 @@
 .portlet-manager-row .portlet-well_manager { width: 30%; float:left; margin:1%; }
 .portlet-manager-row { width:100%; float:left; }
 
+.portlet-manager-row .portlet-well_manager {
+    background-color: #d3d3d354;
+    border-radius: 4px;
+    padding: 0 1rem;
+}
+.portlet-manager-row .portlet-well_manager.contentwellportlets h2{
+    margin-top: 0.5rem;
+}
 
 .contentwellportlets.row{
     display: flex;
