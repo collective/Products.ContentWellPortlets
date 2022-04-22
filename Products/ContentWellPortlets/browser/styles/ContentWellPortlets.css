@@ -2,7 +2,15 @@
 .managePortletsBelowLink,
 .manageFooterPortletsLink,
 .manageInHeaderPortletsLink,
-.managePortletsBelowTitleLink { text-align: center; margin: 0 auto 1em; clear:both;}
+.managePortletsBelowTitleLink { 
+    text-align: center; margin: 0 auto 1em; clear:both;
+    padding: 0.25em 0.5em;
+    margin: 0 auto 1em;
+    background: #ddd;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
 
 .portlet-manager-row .portlet-well_manager { width: 30%; float:left; margin:1%; }
 .portlet-manager-row { width:100%; float:left; }
