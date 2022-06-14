@@ -49,7 +49,7 @@
          name="ContentWellPortlets.AbovePortletManager4"
          type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
     />
-    
+
     <portletmanager remove="True"
          name="ContentWellPortlets.AbovePortletManager5"
          type="Products.ContentWellPortlets.browser.interfaces.IPortletsAboveContent"
@@ -149,5 +149,5 @@
          type="Products.ContentWellPortlets.browser.interfaces.IPortletsBelowContentTitle"
     />
 
-    
+
 </portlets>

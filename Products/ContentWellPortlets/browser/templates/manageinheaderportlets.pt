@@ -19,7 +19,7 @@
         <div metal:fill-slot="portlets_one_slot">
             <tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
         </div>
-        
+
         <div metal:fill-slot="main">
       <dl class="portalMessage info"
           tal:condition="plone_view/isDefaultPageInFolder"
@@ -39,7 +39,7 @@
 
             <h1 class="documentFirstHeading"
                 i18n:translate="manage_portlets_in_header">Manage portlets in the header</h1>
-            
+
             <p>
                  <a href=""
                        class="link-parent"
@@ -47,18 +47,18 @@
                        i18n:translate="return_to_view">
                     Return
                  </a>
-            </p>            
+            </p>
             <div class="portlet-manager-row">
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-a">In Header Portlet A</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager1" />
                 </div>
-            
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-b">In Header Portlet B</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager2" />
                 </div>
-            
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-c">In Header Portlet C</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager3" />
@@ -69,12 +69,12 @@
                     <h2 i18n:translate="in-header-portlet-d">In Header Portlet D</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager4" />
                 </div>
-            
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-e">In Header Portlet E</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager5" />
                 </div>
-            
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="in-header-portlet-f">In Header Portlet F</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.InHeaderPortletManager6" />

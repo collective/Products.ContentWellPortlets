@@ -13,7 +13,7 @@ Because its top level Python namespace package is called ``Products``, this
 package can be installed in Zope 2 as an old style **Zope 2 Product** as follows:
  (a) Check Products.ContentWellPortlets out of subversion onto somewhere on your file system, or untar the tarball
 
- (b) Move (or symlink / soft link) the ``ContentWellPortlets`` folder 
+ (b) Move (or symlink / soft link) the ``ContentWellPortlets`` folder
      (``Products.ContentWellPortlets/Products/ContentWellPortlets``) into the ``Products`` directory of
      the Zope instance it has to be installed for, and restart the server.
 
@@ -25,15 +25,15 @@ If you are using zc.buildout and the plone.recipe.zope2instance recipe, you can 
 
 == B1. To install the latest tagged release ==
  (i) Add ``Products.ContentWellPortlets`` to the list of eggs to install, e.g.:
- 
+
     [buildout]
     ...
     eggs =
         ...
         Products.ContentWellPortlets
-        
+
  (ii) Stop Zope and re-run buildout, e.g. with:
-  
+
     $ ./bin/buildout -N
 
  (iii) Restart Zope; you should see ContentWellPortlets available in the portal_quickinstaller and Add/Remove Products pane of the Plone Control Panel
@@ -46,7 +46,7 @@ If you are using zc.buildout and the plone.recipe.zope2instance recipe, you can 
     extensions = buildout.eggtractor
  * Save these changes to buildout.cfg
  * Stop Zope and re-run buildout, e.g. with:
-  
+
     $ ./bin/buildout -N
 
  (ii) Check the trunk of Products.ContentWellPortlets out of subversion onto somewhere on your file system

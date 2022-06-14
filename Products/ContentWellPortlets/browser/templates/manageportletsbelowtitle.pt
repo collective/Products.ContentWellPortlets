@@ -11,21 +11,21 @@
         </div>
     </head>
     <body>
-        
+
         <metal:block fill-slot="top_slot"
                          tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
                                      disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
-        
+
         <div metal:fill-slot="portlets_one_slot">
             <tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
         </div>
 <div class="manage-portlet-well">
         <div metal:fill-slot="main" >
-            
+
             <tal:warning tal:condition="plone_view/isDefaultPageInFolder">
                 <dl class="portalMessage warning">
                     <dt i18n:translate="message_warning_below_content_area_dt">Is this really where you want to add portlets below the content?</dt>
-                    <dd i18n:translate="message_warning_below_content_area_dd">If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, 
+                    <dd i18n:translate="message_warning_below_content_area_dd">If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder,
                         <a href=""
                            tal:attributes="href string:${plone_view/getCurrentFolderUrl}/@@manage-portletsbelowcontent"
                            i18n:name="manage-portletsbelowcontent_link">
@@ -33,11 +33,11 @@
                         </a>
                     </dd>
                 <dl>
-            </tal:warning>  
+            </tal:warning>
 
             <h1 class="documentFirstHeading"
                 i18n:translate="manage_portlets_below_content">Manage portlets below content</h1>
-            
+
             <p>
               <a href=""
                    class="link-parent"
@@ -45,19 +45,19 @@
                    i18n:translate="return_to_view">
                 Return
               </a>
-            </p>    
-            
+            </p>
+
             <div class="portlet-manager-row">
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="portlet-well-a">Portlet well A</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager1" />
                 </div>
-    
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="portlet-well-b">Portlet well B</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager2" />
                 </div>
-    
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="portlet-well-c">Portlet well C</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager3" />
@@ -68,7 +68,7 @@
                     <h2 i18n:translate="portlet-well-d">Portlet well D</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager4" />
                 </div>
-    
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="portlet-well-e">Portlet well E</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.BelowTitlePortletManager5" />

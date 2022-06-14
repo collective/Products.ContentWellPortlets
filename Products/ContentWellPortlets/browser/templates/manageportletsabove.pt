@@ -19,7 +19,7 @@
         <div metal:fill-slot="portlets_one_slot">
             <tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
         </div>
-        
+
         <div metal:fill-slot="main">
       <dl class="portalMessage info"
           tal:condition="plone_view/isDefaultPageInFolder"
@@ -40,7 +40,7 @@
 
             <h1 class="documentFirstHeading"
                 i18n:translate="manage_portlets_above_content">Manage portlets above content</h1>
-            
+
             <p>
                  <a href=""
                        class="link-parent"
@@ -48,18 +48,18 @@
                        i18n:translate="return_to_view">
                     Return
                  </a>
-            </p>            
+            </p>
             <div class="portlet-manager-row">
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="portlet-well-a">Portlet well A</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager1" />
                 </div>
-            
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="portlet-well-b">Portlet well B</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager2" />
                 </div>
-            
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="portlet-well-c">Portlet well C</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager3" />
@@ -70,12 +70,12 @@
                     <h2 i18n:translate="portlet-well-d">Portlet well D</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager4" />
                 </div>
-            
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="portlet-well-e">Portlet well E</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager5" />
                 </div>
-            
+
                 <div class="portlet-well_manager contentwellportlets">
                     <h2 i18n:translate="portlet-well-f">Portlet well F</h2>
                     <span tal:replace="structure provider:ContentWellPortlets.AbovePortletManager6" />

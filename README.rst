@@ -3,13 +3,13 @@ Overview
 
 * This product enables you to put portlets in places other than right and left
   columns, specifically:
-  
+
   * Underneath global nav but above portal-columns so it spans the width of the page
   * above the main heading (h1) of the page
   * at the base of the page, above the footer
   * in the footer well
-  
-  In each area, you can add up to three columns of portlets. 
+
+  In each area, you can add up to three columns of portlets.
 
 * You should use CSS (in the custom folder in portal_skins, or in your own
   theme product) to configure how these portlets should appear relative to
@@ -61,6 +61,6 @@ Technical details
 * The product adds two new viewlets; within each of these are three portlet
   managers (specified in portlets.xml) For details of exactly which viewlet
   managers these viewlets slot into:
-  
+
   * see configure.zcml in Products/ContentWellPortlets/browser
   * or install the product, go to your Plone site and add /@@manage-viewlets to the URL

@@ -28,7 +28,7 @@
       run_deps="False"
       purge="False"
       />
-    
+
   <genericsetup:upgradeDepends
       title="Upgrade from 4 to 5"
       description="Remove the title attribute from the stylesheet by reimporting cssregistry.xml"

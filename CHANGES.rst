@@ -4,7 +4,7 @@ Changelog
 4.3.1 (unreleased)
 ------------------
 
-- Import fix for plone 5.2 
+- Import fix for plone 5.2
   [gomez]
 
 4.3.0 (2015-07-02)
@@ -12,7 +12,7 @@ Changelog
 
 - Add upgrade step to update cssregistry.
   [cah190]
-  
+
 - Clear the title from the stylesheet registration, as this prevents this makes
   this css resource an alternative stylesheet and prevents to be rendered in
   browsers.

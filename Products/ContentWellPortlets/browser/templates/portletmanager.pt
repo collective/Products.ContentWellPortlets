@@ -6,7 +6,7 @@
                     mgr_class python:manager[1];
                     num_portlets python:view.num_portlets_for_manager(mgr)"
         tal:attributes="class string:${mgr_class} num-portlets-${num_portlets}"
-        tal:content="structure provider:${mgr}"/> 
+        tal:content="structure provider:${mgr}"/>
   </tal:portletmanagers>
   </tal:block>
 </div>
