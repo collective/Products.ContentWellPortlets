@@ -33,34 +33,34 @@ class ContentWellPortletsViewlet(ViewletBase):
 
     def update(self):
         context_state = getMultiAdapter(
-            (self.context, self.request), name=u'plone_context_state'
+            (self.context, self.request), name=u"plone_context_state"
         )
 
         if pap_interfaces.IManageContentTypePortletsView.providedBy(self.view):
-            key = self.request.form.get('key')
-            self.manageUrl = '%s/%s?key=%s' % (
+            key = self.request.form.get("key")
+            self.manageUrl = "%s/%s?key=%s" % (
                 context_state.view_url(),
                 self.manage_type_view,
                 key,
             )
         else:
-            self.manageUrl = '%s/%s' % (context_state.view_url(), self.manage_view)
+            self.manageUrl = "%s/%s" % (context_state.view_url(), self.manage_view)
 
         # This is the way it's done in plone.app.portlets.manager, so we'll do
         # the same
-        mt = getToolByName(self.context, 'portal_membership')
+        mt = getToolByName(self.context, "portal_membership")
         self.canManagePortlets = not self.dont_show_links and mt.checkPermission(
-            'Portlets: Manage portlets', self.context
+            "Portlets: Manage portlets", self.context
         )
 
     def showPortlets(self):
-        return not self.dont_show and '@@manage-portlets' not in self.request.get('URL')
+        return not self.dont_show and "@@manage-portlets" not in self.request.get("URL")
 
     def portletManagers(self):
         managers = []
         try:
             for n in range(1, 7):
-                name = 'ContentWellPortlets.%s%s' % (self.name, n)
+                name = "ContentWellPortlets.%s%s" % (self.name, n)
                 mgr = getUtility(IPortletManager, name=name, context=self.context)
                 managers.append((mgr, name))
             return managers
@@ -76,13 +76,13 @@ class ContentWellPortletsViewlet(ViewletBase):
         managers = []
         numManagers = len(visibleManagers)
         for counter, name in enumerate(visibleManagers):
-            pos = 'position-%s' % str(Fraction(counter, numManagers)).replace('/', ':')
-            width = 'width-%s' % (
-                str(Fraction(1, numManagers)).replace('/', ':')
+            pos = "position-%s" % str(Fraction(counter, numManagers)).replace("/", ":")
+            width = "width-%s" % (
+                str(Fraction(1, numManagers)).replace("/", ":")
                 if numManagers > 1
-                else 'full'
+                else "full"
             )
-            managers.append((name, 'cell %s %s %s' % (name.split('.')[-1], width, pos)))
+            managers.append((name, "cell %s %s %s" % (name.split(".")[-1], width, pos)))
         return managers
 
     def num_portlets_for_manager(self, name):
@@ -100,76 +100,76 @@ class ContentWellPortletsViewlet(ViewletBase):
 
 
 class PortletsInHeaderViewlet(ContentWellPortletsViewlet):
-    name = 'InHeaderPortletManager'
-    manage_view = '@@manage-portletsinheader'
-    manage_type_view = '@@manage-typeportletsinheader'
-    cssid = 'portlets-in-header'
-    manage_portlets_link_class = 'manageInHeaderPortletsLink'
+    name = "InHeaderPortletManager"
+    manage_view = "@@manage-portletsinheader"
+    manage_type_view = "@@manage-typeportletsinheader"
+    cssid = "portlets-in-header"
+    manage_portlets_link_class = "manageInHeaderPortletsLink"
 
     @property
     def manage_portlets_link_text(self):
         return _(
-            'manage-in-header-portlet-link',
-            default=u'Add, edit or remove a portlet in the header area that '
-            u'spans columns one and two plus the content area',
+            "manage-in-header-portlet-link",
+            default=u"Add, edit or remove a portlet in the header area that "
+            u"spans columns one and two plus the content area",
         )
 
 
 class PortletsBelowTitleViewlet(ContentWellPortletsViewlet):
-    name = 'BelowTitlePortletManager'
-    manage_view = '@@manage-portletsbelowtitlecontent'
-    manage_type_view = '@@manage-typeportletsbelowtitlecontent'
-    cssid = 'portlets-below-title'
-    manage_portlets_link_class = 'managePortletsBelowTitleLink'
+    name = "BelowTitlePortletManager"
+    manage_view = "@@manage-portletsbelowtitlecontent"
+    manage_type_view = "@@manage-typeportletsbelowtitlecontent"
+    cssid = "portlets-below-title"
+    manage_portlets_link_class = "managePortletsBelowTitleLink"
 
     @property
     def manage_portlets_link_text(self):
         return _(
-            'manage_portlets_below_title_link',
-            default=u'Add, edit or remove a portlet below the content title',
+            "manage_portlets_below_title_link",
+            default=u"Add, edit or remove a portlet below the content title",
         )
 
 
 class PortletsAboveViewlet(ContentWellPortletsViewlet):
-    name = 'AbovePortletManager'
-    manage_view = '@@manage-portletsabovecontent'
-    manage_type_view = '@@manage-typeportletsabovecontent'
-    cssid = 'portlets-above'
-    manage_portlets_link_class = 'managePortletsAboveLink'
+    name = "AbovePortletManager"
+    manage_view = "@@manage-portletsabovecontent"
+    manage_type_view = "@@manage-typeportletsabovecontent"
+    cssid = "portlets-above"
+    manage_portlets_link_class = "managePortletsAboveLink"
 
     @property
     def manage_portlets_link_text(self):
         return _(
-            'manage_portlets_above_link',
-            default=u'Add, edit or remove a portlet above the content',
+            "manage_portlets_above_link",
+            default=u"Add, edit or remove a portlet above the content",
         )
 
 
 class PortletsBelowViewlet(ContentWellPortletsViewlet):
-    name = 'BelowPortletManager'
-    manage_view = '@@manage-portletsbelowcontent'
-    manage_type_view = '@@manage-typeportletsbelowcontent'
-    cssid = 'portlets-below'
-    manage_portlets_link_class = 'managePortletsBelowLink'
+    name = "BelowPortletManager"
+    manage_view = "@@manage-portletsbelowcontent"
+    manage_type_view = "@@manage-typeportletsbelowcontent"
+    cssid = "portlets-below"
+    manage_portlets_link_class = "managePortletsBelowLink"
 
     @property
     def manage_portlets_link_text(self):
         return _(
-            'manage_portlets_below_link',
-            default=u'Add, edit or remove a portlet below the content',
+            "manage_portlets_below_link",
+            default=u"Add, edit or remove a portlet below the content",
         )
 
 
 class FooterPortletsViewlet(ContentWellPortletsViewlet):
-    name = 'FooterPortletManager'
-    manage_view = '@@manage-portletsfooter'
-    manage_type_view = '@@manage-typeportletsfooter'
-    cssid = 'portlets-footer'
-    manage_portlets_link_class = 'manageFooterPortletsLink'
+    name = "FooterPortletManager"
+    manage_view = "@@manage-portletsfooter"
+    manage_type_view = "@@manage-typeportletsfooter"
+    cssid = "portlets-footer"
+    manage_portlets_link_class = "manageFooterPortletsLink"
 
     @property
     def manage_portlets_link_text(self):
         return _(
-            'manage-footer-portlet-link',
-            default=u'Add, edit or remove a portlet in the footer',
+            "manage-footer-portlet-link",
+            default=u"Add, edit or remove a portlet in the footer",
         )

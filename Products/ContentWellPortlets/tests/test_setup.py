@@ -11,9 +11,9 @@ class TestSetup(ContentWellPortletsTestCase):
     def testCSSregistered(self):
         """Is our stylesheet registered?"""
         self.failUnless(
-            '++resource++ContentWellPortlets.styles/ContentWellPortlets.css'
+            "++resource++ContentWellPortlets.styles/ContentWellPortlets.css"
             in self.portal.portal_css.getResourceIds(),
-            'Cannot find CSS',
+            "Cannot find CSS",
         )
 
     def testInterfaceAvailable(self):
@@ -23,7 +23,7 @@ class TestSetup(ContentWellPortletsTestCase):
 
         self.failUnless(
             IContentWellPortlets in utils.registered_layers(),
-            'Cannot find IContentWellPortlets interface',
+            "Cannot find IContentWellPortlets interface",
         )
 
     def testPortletManagers(self):
@@ -38,17 +38,17 @@ class TestSetup(ContentWellPortletsTestCase):
         # get the portlet managers we should have created
         managerAbove = getUtility(
             IPortletManager,
-            name='ContentWellPortlets.AbovePortletManager1',
+            name="ContentWellPortlets.AbovePortletManager1",
             context=self.portal,
         )
         managerBelow = getUtility(
             IPortletManager,
-            name='ContentWellPortlets.BelowPortletManager1',
+            name="ContentWellPortlets.BelowPortletManager1",
             context=self.portal,
         )
         managerFooter = getUtility(
             IPortletManager,
-            name='ContentWellPortlets.FooterPortletManager1',
+            name="ContentWellPortlets.FooterPortletManager1",
             context=self.portal,
         )
 
@@ -59,7 +59,7 @@ class TestSetup(ContentWellPortletsTestCase):
             (
                 self.folder,
                 self.folder.REQUEST,
-                self.folder.restrictedTraverse('@@plone'),
+                self.folder.restrictedTraverse("@@plone"),
                 managerAbove,
                 calendar.Assignment(),
             ),
@@ -67,14 +67,14 @@ class TestSetup(ContentWellPortletsTestCase):
         )
         self.failUnless(
             isinstance(renderer, calendar.Renderer),
-            'Cannot render portlet above contents',
+            "Cannot render portlet above contents",
         )
 
         renderer = getMultiAdapter(
             (
                 self.folder,
                 self.folder.REQUEST,
-                self.folder.restrictedTraverse('@@plone'),
+                self.folder.restrictedTraverse("@@plone"),
                 managerBelow,
                 calendar.Assignment(),
             ),
@@ -82,14 +82,14 @@ class TestSetup(ContentWellPortletsTestCase):
         )
         self.failUnless(
             isinstance(renderer, calendar.Renderer),
-            'Cannot render portlet below contents',
+            "Cannot render portlet below contents",
         )
 
         renderer = getMultiAdapter(
             (
                 self.folder,
                 self.folder.REQUEST,
-                self.folder.restrictedTraverse('@@plone'),
+                self.folder.restrictedTraverse("@@plone"),
                 managerFooter,
                 calendar.Assignment(),
             ),
@@ -97,7 +97,7 @@ class TestSetup(ContentWellPortletsTestCase):
         )
         self.failUnless(
             isinstance(renderer, calendar.Renderer),
-            'Cannot render footer portlet contents',
+            "Cannot render footer portlet contents",
         )
 
 

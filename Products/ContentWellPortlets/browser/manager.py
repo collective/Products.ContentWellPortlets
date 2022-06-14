@@ -11,4 +11,4 @@ class ContentWellPortletRenderer(ColumnPortletManagerRenderer):
     """A renderer for the content-well portlets"""
 
     adapts(Interface, IDefaultBrowserLayer, IBrowserView, IContentWellPortletManager)
-    template = ViewPageTemplateFile('templates/renderer.pt')
+    template = ViewPageTemplateFile("templates/renderer.pt")

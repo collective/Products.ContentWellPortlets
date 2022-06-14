@@ -14,7 +14,7 @@ def setup_ContentWellPortlets():
     fiveconfigure.debug_mode = True
     import Products.ContentWellPortlets
 
-    zcml.load_config('configure.zcml', Products.ContentWellPortlets)
+    zcml.load_config("configure.zcml", Products.ContentWellPortlets)
     fiveconfigure.debug_mode = False
 
     # Make the product available.
@@ -33,7 +33,7 @@ def setup_ContentWellPortlets():
 setup_ContentWellPortlets()
 
 # Let Plone test case set up this product
-ptc.setupPloneSite(products=['Products.ContentWellPortlets'])
+ptc.setupPloneSite(products=["Products.ContentWellPortlets"])
 
 
 class ContentWellPortletsTestCase(ptc.PloneTestCase):

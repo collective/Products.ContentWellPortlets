@@ -1,6 +1,6 @@
 from zope.i18nmessageid import MessageFactory
 
-messageFactory = MessageFactory('Products.ContentWellPortlets')
+messageFactory = MessageFactory("Products.ContentWellPortlets")
 
 
 def initialize(context):
