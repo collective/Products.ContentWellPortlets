@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.3.1 (unreleased)
+4.3.1 (2022-06-14)
 ------------------
 
 - Import fix for plone 5.2
