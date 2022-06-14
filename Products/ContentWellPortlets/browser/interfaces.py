@@ -4,8 +4,7 @@ from plone.app.portlets.interfaces import IColumn
 
 
 class IContentWellPortlets(Interface):
-    """A layer specific to this product. Is registered using browserlayer.xml
-    """
+    """A layer specific to this product. Is registered using browserlayer.xml"""
 
 
 class IContentWellPortletManager(IPortletManager, IColumn):
@@ -16,25 +15,20 @@ class IContentWellPortletManager(IPortletManager, IColumn):
 
 
 class IHeaderPortlets(IContentWellPortletManager):
-    """For the portlet manager above the content area.
-    """
+    """For the portlet manager above the content area."""
 
 
 class IPortletsAboveContent(IContentWellPortletManager):
-    """For the portlet manager above the content area.
-    """
+    """For the portlet manager above the content area."""
 
 
 class IPortletsBelowContent(IContentWellPortletManager):
-    """For the portlet manager below the content area.
-    """
+    """For the portlet manager below the content area."""
 
 
 class IFooterPortlets(IContentWellPortletManager):
-    """For the portlet manager in the footer area.
-    """
+    """For the portlet manager in the footer area."""
 
 
 class IPortletsBelowContentTitle(IContentWellPortletManager):
-    """For the portlet manager below the content title.
-    """
+    """For the portlet manager below the content title."""

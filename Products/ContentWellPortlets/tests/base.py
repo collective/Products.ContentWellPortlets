@@ -8,11 +8,12 @@ from Products.PloneTestCase.layer import onsetup
 @onsetup
 def setup_ContentWellPortlets():
     """The @onsetup decorator means this will not execute until the Plone site
-    testing layer has been set up """
+    testing layer has been set up"""
 
     # Load the ZCML configuration
     fiveconfigure.debug_mode = True
     import Products.ContentWellPortlets
+
     zcml.load_config('configure.zcml', Products.ContentWellPortlets)
     fiveconfigure.debug_mode = False
 
@@ -21,11 +22,12 @@ def setup_ContentWellPortlets():
     # "Installing Products.ContentWellPortlets ... NOT FOUND"
     # Therefore did it this way instead
     from OFS.Application import install_package
+
     app = ztc.app()
     install_package(
-        app,
-        Products.ContentWellPortlets,
-        Products.ContentWellPortlets.initialize)
+        app, Products.ContentWellPortlets, Products.ContentWellPortlets.initialize
+    )
+
 
 # Call the (deferred) function
 setup_ContentWellPortlets()

@@ -7,9 +7,8 @@ setup(
     name='Products.ContentWellPortlets',
     version=version,
     description="A Plone product that enables you to add portlets to the "
-                "central column in a page",
-    long_description="%s\n%s" % (
-        open("README.rst").read(), open("CHANGES.rst").read()),
+    "central column in a page",
+    long_description="%s\n%s" % (open("README.rst").read(), open("CHANGES.rst").read()),
     classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
@@ -24,10 +23,7 @@ setup(
     namespace_packages=['Products'],
     include_package_data=True,
     zip_safe=False,
-    install_requires=[
-        'setuptools',
-        'Products.CMFPlone>=4.0b1'
-    ],
+    install_requires=['setuptools', 'Products.CMFPlone>=4.0b1'],
     extras_require=dict(
         test=[
             'Products.PloneTestCase',

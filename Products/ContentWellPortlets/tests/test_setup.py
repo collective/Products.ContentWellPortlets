@@ -3,29 +3,28 @@ from Products.ContentWellPortlets.tests.base import ContentWellPortletsTestCase
 
 
 class TestSetup(ContentWellPortletsTestCase):
-    """Check whether product is installed correctly
-    """
+    """Check whether product is installed correctly"""
 
     def afterSetUp(self):
         pass
 
     def testCSSregistered(self):
-        """Is our stylesheet registered?
-        """
+        """Is our stylesheet registered?"""
         self.failUnless(
             '++resource++ContentWellPortlets.styles/ContentWellPortlets.css'
             in self.portal.portal_css.getResourceIds(),
-            'Cannot find CSS')
+            'Cannot find CSS',
+        )
 
     def testInterfaceAvailable(self):
-        """Is our product-specific interface available?
-        """
+        """Is our product-specific interface available?"""
         from plone.browserlayer import utils
-        from Products.ContentWellPortlets.browser.interfaces\
-            import IContentWellPortlets
+        from Products.ContentWellPortlets.browser.interfaces import IContentWellPortlets
+
         self.failUnless(
             IContentWellPortlets in utils.registered_layers(),
-            'Cannot find IContentWellPortlets interface')
+            'Cannot find IContentWellPortlets interface',
+        )
 
     def testPortletManagers(self):
         """Are our portlet managers available? Test by inserting a calendar
@@ -40,15 +39,18 @@ class TestSetup(ContentWellPortletsTestCase):
         managerAbove = getUtility(
             IPortletManager,
             name='ContentWellPortlets.AbovePortletManager1',
-            context=self.portal)
+            context=self.portal,
+        )
         managerBelow = getUtility(
             IPortletManager,
             name='ContentWellPortlets.BelowPortletManager1',
-            context=self.portal)
+            context=self.portal,
+        )
         managerFooter = getUtility(
             IPortletManager,
             name='ContentWellPortlets.FooterPortletManager1',
-            context=self.portal)
+            context=self.portal,
+        )
 
         # try rendering a portlet with it using
         # getMultiAdapter((context, request, view, manager, assignment),
@@ -59,22 +61,29 @@ class TestSetup(ContentWellPortletsTestCase):
                 self.folder.REQUEST,
                 self.folder.restrictedTraverse('@@plone'),
                 managerAbove,
-                calendar.Assignment()),
-            IPortletRenderer)
+                calendar.Assignment(),
+            ),
+            IPortletRenderer,
+        )
         self.failUnless(
             isinstance(renderer, calendar.Renderer),
-            'Cannot render portlet above contents')
+            'Cannot render portlet above contents',
+        )
 
         renderer = getMultiAdapter(
             (
                 self.folder,
                 self.folder.REQUEST,
                 self.folder.restrictedTraverse('@@plone'),
-                managerBelow, calendar.Assignment()),
-            IPortletRenderer)
+                managerBelow,
+                calendar.Assignment(),
+            ),
+            IPortletRenderer,
+        )
         self.failUnless(
             isinstance(renderer, calendar.Renderer),
-            'Cannot render portlet below contents')
+            'Cannot render portlet below contents',
+        )
 
         renderer = getMultiAdapter(
             (
@@ -82,11 +91,14 @@ class TestSetup(ContentWellPortletsTestCase):
                 self.folder.REQUEST,
                 self.folder.restrictedTraverse('@@plone'),
                 managerFooter,
-                calendar.Assignment()),
-            IPortletRenderer)
+                calendar.Assignment(),
+            ),
+            IPortletRenderer,
+        )
         self.failUnless(
             isinstance(renderer, calendar.Renderer),
-            'Cannot render footer portlet contents')
+            'Cannot render footer portlet contents',
+        )
 
 
 def test_suite():

@@ -8,11 +8,7 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 
 class ContentWellPortletRenderer(ColumnPortletManagerRenderer):
-    """A renderer for the content-well portlets
-    """
-    adapts(
-        Interface,
-        IDefaultBrowserLayer,
-        IBrowserView,
-        IContentWellPortletManager)
+    """A renderer for the content-well portlets"""
+
+    adapts(Interface, IDefaultBrowserLayer, IBrowserView, IContentWellPortletManager)
     template = ViewPageTemplateFile('templates/renderer.pt')
