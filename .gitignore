@@ -19,3 +19,4 @@
 *.html.py
 *.egg
 .Trashes
+/Products/ContentWellPortlets/locales/rebuild_i18n.log
